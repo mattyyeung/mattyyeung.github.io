@@ -1,1 +1,12 @@
 theme: minima
+
+header_pages:
+  - about.md
+  - testpage.md
+
+minima:
+  date_format: "%b %Y"
+
+author:
+  name: John Smith
+  email: "john.smith@foobar.com"
