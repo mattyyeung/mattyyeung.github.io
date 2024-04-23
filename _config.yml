@@ -27,11 +27,11 @@ theme: minima
 
 # If you want to link only specific pages in your header, use this and add the path to the pages
 # in order as they should show up.
-header_pages:
-  - about.md
-  - front-path-piano.md
-  - deterministic-quoting.md
-  - greenforecast.md
+# header_pages:
+#   - about.md
+#   - front-path-piano.md
+#   - deterministic-quoting.md
+#   - greenforecast.md
 
 # Set to `true` to show excerpts on the homepage.
 show_excerpts: true
@@ -39,7 +39,7 @@ show_excerpts: true
 # use `<!--more-->` in a post to choose where excerpts on homepage will be cut
 excerpt_separator: <!--more-->
 
-# Set urls of posts to just be the `/category/title, not `/2024/02/title`. See https://jekyllrb.com/docs/permalinks/
+# Set urls of posts to just be the `/category/title, not `/2024/02/title`. if no category, just `/title` See https://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:title
 
 # Minima specific settings, which are only available from Minima 3.0 onward.
