@@ -29,10 +29,15 @@ theme: minima
 # in order as they should show up.
 header_pages:
   - about.md
-  - testpage.md
+  - front-path-piano.md
+  - deterministic-quoting.md
+  - greenforecast.md
 
 # Set to `true` to show excerpts on the homepage.
 show_excerpts: true
+
+# use `<!--more-->` in a post to choose where excerpts on homepage will be cut
+excerpt_separator: <!--more-->
 
 # Set urls of posts to just be the title, not `/2024/02/title`. See https://jekyllrb.com/docs/permalinks/
 permalink: none
