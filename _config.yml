@@ -39,8 +39,8 @@ show_excerpts: true
 # use `<!--more-->` in a post to choose where excerpts on homepage will be cut
 excerpt_separator: <!--more-->
 
-# Set urls of posts to just be the title, not `/2024/02/title`. See https://jekyllrb.com/docs/permalinks/
-permalink: none
+# Set urls of posts to just be the `/category/title, not `/2024/02/title`. See https://jekyllrb.com/docs/permalinks/
+permalink: /:categories/:title
 
 # Minima specific settings, which are only available from Minima 3.0 onward.
 minima:
