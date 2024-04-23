@@ -8,3 +8,23 @@
 layout: home
 ---
 text btwnn top bar abd recent posts
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+pages:
+
+<ul>
+  {% for a_page in site.pages %}
+    <li>
+      <a href="{{ a_page.url }}">{{ a_page.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+...
