@@ -11,14 +11,14 @@ layout: default
 
 Articles:
 
-- ## [My Front Path Piano](/front-path-piano)
+- ### [My Front Path Piano](/front-path-piano)
 
 
 
-- ## [Healthcare needs trustworthy LLMs: Deterministic Quoting can help](/deterministic-quoting)
+- ### [Healthcare needs trustworthy LLMs: Deterministic Quoting can help](/deterministic-quoting)
 
 
 
-- ## [GreenForecast.au](http://greenforecast.au)
-	*7-Day Outlook of Renewable Electricity and Power Price in the National Electricity Market*
-	[Introduction](/greenforecast)
+- ### [GreenForecast.au](http://greenforecast.au)
+        *7-Day Outlook of Renewable Electricity and Power Price in the National Electricity Market*
+        [Introduction](/greenforecast)
