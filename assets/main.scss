@@ -12,9 +12,8 @@ hr {
   border-bottom: none;
   border-left: none;
   border-right: none;
-  margin: 15px 0;
+  margin: $spacing-unit 0;
 }
-
 
 .footer-col-wrapper {
   @include relative-font-size(0.7);
