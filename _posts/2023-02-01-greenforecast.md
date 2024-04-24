@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "GreenForecast"
+title: "GreenForecast: Introduction"
 ---
 
-> *What's the greenest time of the day or week to use electricity?* 
+*What's the greenest time of the day or week to use electricity?* 
 
 Sadly, it's complicated: the answer depends on your state, the season, the day of the week, the weather and how much rain there was in the mountains last year. 
 
