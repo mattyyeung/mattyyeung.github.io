@@ -3,3 +3,19 @@
 ---
 
 @import "minima";
+
+
+
+
+hr {
+  border-top: 1px solid $grey-color-light;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: $spacing-unit 0;
+}
+
+
+.footer-col-wrapper {
+  @include relative-font-size(0.75);
+}
