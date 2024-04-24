@@ -1,7 +1,10 @@
 ---
-layout: post
-title: "My Front Path Piano"
+layout: page
 ---
+
+
+<!-- title: "My Front Path Piano" -->
+
 
 I turned my front path into a light-up keyboard:
 ![]
