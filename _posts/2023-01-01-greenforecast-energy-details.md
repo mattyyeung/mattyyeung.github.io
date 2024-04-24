@@ -4,7 +4,7 @@ title: "GreenForecast: Details for Energy People"
 ---
 
 *Below are details about [greenforecast.au](http://greenforecast.au/) specifically for "energy nerds". For an introduction to greenforecast.au, see [here](/greenforecast)*
-
+---
 ### Greenness Details:
 
 For simplicity, the analysis assumes fuel sources are either 'Green' or 'Not Green'. Wind, solar and hydro are 'Green' while coal, diesel and gas (in various forms) are not. Reality is not so simple but these complexities don't currently substantially affect the overall result.

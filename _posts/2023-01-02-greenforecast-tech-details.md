@@ -80,8 +80,8 @@ Training a thousand sub-models takes about 3 days on a single consumer GPU. Infe
 
 Dataset generation and model training are offline. Inference is in AWS Lambda, kicking off every two hours. This website frontend is just a static page on S3. For details, see the deployment diagram on [github](https://github.com/mattyyeung/GreenForecastPublic).
 
-
 ---
-Related:
+
+#### Related:
 - [greenforecast.au](http://greenforecast.au/)
 - [Introducing GreenForecast.au](/greenforecast)
