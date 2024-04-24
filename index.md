@@ -7,13 +7,23 @@
 #
 layout: home
 ---
-text btwnn top bar abd recent posts
+
+
+### [GreenForecast.au](http://greenforecast.au)
+7-Day Outlook of Renewable Electricity and Power Price in the National Electricity Market
+- [Introduction](/greenforecast)
+
+### [Healthcare needs trustworthy LLMs: Deterministic Quoting can help](/deterministic-quoting)
+
+### [Front Path Piano](/front-path-piano)
+
+--- 
 
 <ul>
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
+      <!-- {{ post.excerpt }} -->
     </li>
   {% endfor %}
 </ul>
@@ -24,7 +34,7 @@ pages:
   {% for a_page in site.pages %}
     <li>
       <a href="{{ a_page.url }}">{{ a_page.title }}</a>
-      {{ a_page.excerpt }}
+      <!-- {{ a_page.excerpt }} -->
     </li>
   {% endfor %}
 </ul>

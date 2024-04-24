@@ -37,7 +37,7 @@ header_pages:
 show_excerpts: false
 
 # use `<!--more-->` in a post to choose where excerpts on homepage will be cut
-excerpt_separator: <!--more-->
+# excerpt_separator: <!--more-->
 
 # Set urls of posts to just be the `/category/title, not `/2024/02/title`. if no category, just `/title` See https://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:title
