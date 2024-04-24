@@ -15,4 +15,9 @@ Articles:
 
 - ### [Healthcare needs trustworthy LLMs: Deterministic Quoting can help](/deterministic-quoting)
 
-- ### [Introducing GreenForecast.au](/greenforecast) *7-Day Outlook of Renewable Electricity and Power Price in the National Electricity Market*
+- ### [Introducing GreenForecast.au](/greenforecast) <br>*7-Day Outlook of Renewable Electricity and Power Price in the National Electricity Market*
+
+- ### [GreenForecast - Details for Energy People](/greenforecast-energy-details)
+
+- ### [GreenForecast - Details for Tech People](/greenforecast-tech-details)
+

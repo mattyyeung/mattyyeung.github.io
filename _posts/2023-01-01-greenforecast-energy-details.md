@@ -73,3 +73,8 @@ Not much, because this growth is already reflected in the raw data coming from A
 ### Why split state-by-state? Don't local effects matter?
 
 There is no great reason for this. The NEM is split up this way and so is the data.
+
+---
+Related:
+- [greenforecast.au](http://greenforecast.au/)
+- [Introducing GreenForecast.au](/greenforecast)
