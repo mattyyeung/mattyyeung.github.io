@@ -3,7 +3,7 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -11,21 +11,18 @@
           <li class="p-name">
             {%- if site.author -%}
               {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
             {%- endif -%}
             </li>
             {%- if site.email -%}
             <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {%- endif -%}
+            <li>Melbourne, Australia</li>
+            <li><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 Int</a></li>
         </ul>
       </div>
 
       <div class="footer-col footer-col-2">
         {%- include social.html -%}
-        <p>Melbourne, Australia</p>
-        <p><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 Int</a></p>
-
       </div>
 
       <div class="footer-col footer-col-3">

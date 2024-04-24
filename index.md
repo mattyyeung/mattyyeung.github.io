@@ -20,5 +20,5 @@ Articles:
 
 
 - ### [GreenForecast.au](http://greenforecast.au)
-        *7-Day Outlook of Renewable Electricity and Power Price in the National Electricity Market*
-        [Introduction](/greenforecast)
+    *7-Day Outlook of Renewable Electricity and Power Price in the National Electricity Market*
+    [Introduction](/greenforecast)
