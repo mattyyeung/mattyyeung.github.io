@@ -8,6 +8,7 @@
 layout: home
 ---
 
+...
 
 ### [My Front Path Piano](/front-path-piano)
 
