@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Clap Toaster [2009]"
+title: "Clap Toaster"
 ---
 
 <video width="640" height="480" controls autoplay muted loop>
