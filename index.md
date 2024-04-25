@@ -18,4 +18,6 @@ layout: default
 
 - ### [GreenForecast - Details for Tech People](/greenforecast-tech-details)
 
+- ### [Usability and performance of the MicroGEM Sal6830™](https://www.medrxiv.org/content/10.1101/2023.01.01.22283267v1.full-text) <br>*an RT-PCR saliva-based point-of-care platform*
+
 - ### [Clap Toaster [2009]](/clap-toaster)
