@@ -19,11 +19,14 @@ It's Complicated, but yes.
 
 Currently, the vast majority of electricity that is generated is "used" in less than a second. This will remain true until we have (HEAPS) more battery and pumped storage. It makes intuitive sense that the Greenness of your electricity is calculated from whatever power plants are generating right now.
 
-But if someone moves their consumption from a 'dirty' time to a 'clean' time, does that _cause_ the total production of green energy to increase? In the short term, generally not?Wind, solar and hydro typically generate regardless of demand; if usage increases or decreases, they rarely change output, because their fuel is free. (Hydro does respond to demand changes in the short-term, but ultimately the total amount of water available is non-negotiable). This leaves only gas that responds to changes in demand, which means moving consumption from one time to another simply changes _when_ some gas turbine runs, not how much.  
-  
-Now, there is an exception to this: when there is very high Greenness, excess supply (high wind and sun) the price goes negative. Here, solar and wind plants will reduce their output to avoid excess supply causing problems in the grid. Moving consumption to these times would indeed enable higher renewable generation. Currently, this happens only on occasional days in SA during spring/summer, but will increase in prevalence in coming years.: more people share the same amount of green energy. But in the long term, moving our consumption to times of high Greenness _does_ enable more green power plants to be built: money that would otherwise be needed for expensive batteries (or rapid-response gas turbines) is spent on cheap wind and solar. Indeed, there are already areas where it is less profitable to add wind/solar because of excess capacity.
+But if someone moves their consumption from a 'dirty' time to a 'clean' time, does that _cause_ the total production of green energy to increase? In the short term, generally not\*: more people share the same amount of green energy. But in the long term, moving our consumption to times of high Greenness _does_ enable more green power plants to be built: money that would otherwise be needed for expensive batteries (or rapid-response gas turbines) is spent on cheap wind and solar. Indeed, there are already areas where it is less profitable to add wind/solar because of excess capacity.
 
 Put another way, if everybody magically decided to schedule their big loads (eg heating/cooling, EV charging) during times of high Greenness, our transition to 100% renewables would be faster and our electricity bills cheaper.
+
+\*To explain "generally not" above: *Wind, solar and hydro typically generate regardless of demand; if usage increases or decreases, they rarely change output, because their fuel is free. (Hydro does respond to demand changes in the short-term, but ultimately the total amount of water available is non-negotiable). This leaves only gas that responds to changes in demand, which means moving consumption from one time to another simply changes _when_ some gas turbine runs, not how much.*
+
+*Now, there is an exception to this: when there is very high Greenness, excess supply (high wind and sun) the price goes negative. Here, solar and wind plants will reduce their output to avoid excess supply causing problems in the grid. Moving consumption to these times would indeed enable higher renewable generation. Currently, this happens only on occasional days in SA during spring/summer, but will increase in prevalence in coming years.*
+
 
 ### What about WA? NT?
 
@@ -39,7 +42,7 @@ Interconnectors?The big transmission lines that link states together affect Gree
 
 ### What is "Wholesale Price"?
 
-Power companies and power plants buy and sell electricity to each other on a "national" spot market, operated by AEMO. Every 5 minutes there is a new market price for each region (state). Every-day consumers typically don't have direct access to this market: their power company buys on behalf of all its customers. Customers pay a flat fee to the power company so the minute-to-minute fluctations of the market don't affect them directly. However, larger commercial/industrial customers may be directly exposed to market fluctuations and there are also some (TODO) power companies that offer 'pass-through' pricing to households.
+Power companies and power plants buy and sell electricity to each other on a "national" spot market, operated by AEMO. Every 5 minutes there is a new market price for each region (state). Every-day consumers typically don't have direct access to this market: their power company buys on behalf of all its customers. Customers pay a flat fee to the power company so the minute-to-minute fluctations of the market don't affect them directly. However, larger commercial/industrial customers may be directly exposed to market fluctuations and there are also some <!-- (TODO) --> power companies that offer 'pass-through' pricing to households.
 
 Note that the wholesale price of electricity only makes up part of your power bill: other "fixed costs" for infrastructure eg "poles and wires" also contribute.
 
@@ -54,7 +57,7 @@ Note that the wholesale price of electricity only makes up part of your power bi
 
 Greenness: [watttime.org](https://www.watttime.org) uses different measure in place of Greenness: a _marginal_ rate not an absolute one (see their [methodology](https://www.watttime.org/marginal-emissions-methodology/) and [API](https://www.watttime.org/api-documentation/#introduction) pages).
 
-Price: AEMO provides "forecasts"?Predispatch arguably isn't intended as a forecast but is often used as such up to 48h in the future. Standing on these shoulders, the GreenForecast.au improves these predictions a little. Beyond 48 hours, grenforecast.au seems to be the only one.
+Price: AEMO provides "forecasts" (predispatch arguably isn't intended as a forecast but is often used as such) up to 48h in the future. Standing on these shoulders, the GreenForecast.au improves these predictions a little. Beyond 48 hours, grenforecast.au seems to be the only one.
 
 If you would like to compare these predictions to your own forecaster or you know of any public alternatives, please get in touch! Mail info\[AT\]greenforecast.au or [@GreenForecastAu](https://twitter.com/GreenForecastAu) on twitter.
 
@@ -75,6 +78,12 @@ Not much, because this growth is already reflected in the raw data coming from A
 ### Why split state-by-state? Don't local effects matter?
 
 There is no great reason for this. The NEM is split up this way and so is the data.
+
+
+<!--
+- generation, not demand
+- There are (too) many subtly different flavours of demand/generation[TODO: link]. This project uses TODO, but the difference is largely academic. 
+-->
 
 ---
 #### Related:

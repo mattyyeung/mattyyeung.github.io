@@ -23,7 +23,7 @@ Roughly a thousand features are collected at inference. Data comes from AEMO, th
 
 ### What is the training dataset?
 
-A custom-prepared dataset with around one million datapoints for each NEM region dating back to 2010. Some basic (hand-crafted) data augmentation bulks out scarce post-2022-energy-crisis data. For details, see TODO on github.
+A custom-prepared dataset with around one million datapoints for each NEM region dating back to 2010. Some basic (hand-crafted) data augmentation bulks out scarce post-2022-energy-crisis data. For details, see [github](https://github.com/mattyyeung/GreenForecastPublic/tree/main). <!-- TODO - add dataset generato-->
 
 ### What types features are used?
 
@@ -33,11 +33,11 @@ Each sub-model (eg Price 48h in advance) uses a hand-crafted subset of around 10
 
 ### How does this model compare to architecture X?
 
-Experiments so far: Random Forests, ARIMA, DeepAR, TFT, NHiTS, NBEATS, LGBoost, Prophet, various variations on MLPs. Some experiments were extensive, others weren't. Simple MLPs and XGBoost have performed the best. \[results TODO\]. Suggestions, feedback and experimentation with alternatives welcome.
+Experiments so far: Random Forests, ARIMA, DeepAR, TFT, NHiTS, NBEATS, LGBoost, Prophet, various variations on MLPs. Some experiments were extensive, others weren't. Simple MLPs and XGBoost have performed the best. <!-- \[results TODO\] -->. Suggestions, feedback and experimentation with alternatives welcome.
 
 ### Why might this architecture be performing best?
 
-This problem may differ from standard time-series forecasting problems (eg M5) because there are good covariant features and forecasts (eg weather, wind output, etc) available. With basic feature engineering (eg selected past and forecast lags) it perhaps looks more like a tabular data problem than standard time-series forecasting. If so, strong performance from simple neural networks and gradient boosting is not surprising. TODO
+This problem may differ from standard time-series forecasting problems (eg M5) because there are good covariant features and forecasts (eg weather, wind output, etc) available. With basic feature engineering (eg selected past and forecast lags) it perhaps looks more like a tabular data problem than standard time-series forecasting. If so, strong performance from simple neural networks and gradient boosting is not surprising. <!-- TODO -->
 
 ### What other techniques were used to improve results?
 
@@ -72,7 +72,7 @@ Bespoke models for each state performed better than a single model trained on al
 
 ### Can I use the dataset for my own project?
 
-Yes. Github TODO (See contact details below for now)
+Yes. [Github](https://github.com/mattyyeung/GreenForecastPublic/tree/main) <!-- TODO --> or see contact details below for info
 
 ### How long does training take?
 
