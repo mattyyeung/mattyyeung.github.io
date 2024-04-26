@@ -8,7 +8,7 @@ Hallucinations are a barrier to adopting LLMs in mission-critical applications l
 
 At [Invetech](https://www.invetechgroup.com/), we’re working on “Deterministic Quoting”, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
-![/assets/deterministic-quoting/1.png]
+!(/assets/deterministic-quoting/1.png)
 
 In this example, everything displayed with a blue background is guaranteed to be _verbatim_ from source material. No hallucinations. LLMs remain imperfect, so it may still choose to quote the _wrong part_ of the source material, but only “real” quotations are displayed on blue - they are deterministically generated.
 
@@ -29,7 +29,7 @@ Many LLM systems can be designed to deterministically quote. This article provid
 
 Many organisations want to deploy LLMs with knowledge of their data and documentation. But in healthcare, the fear and reality of hallucinations prevent safe use.
 
-![/assets/deterministic-quoting/hallucination.png]
+!(/assets/deterministic-quoting/hallucination.png)
 
 All current LLMs hallucinate.
 
@@ -56,7 +56,7 @@ Deterministic Quoting techniques bridge the LLM “trust gap”.
 
 Applications with Deterministic Quoting provide verbatim “ground-truth” information interspersed with LLM commentary. It combines the convenience and flexibility of the LLM with reliable, trustworthy data that is guaranteed to be hallucination-free. Users benefit from the framing and commentary but can easily verify the underlying assumptions any extra action.
 
-![/assets/deterministic-quoting/2.png]
+!(/assets/deterministic-quoting/2.png)
 
 The “hallucination-free” guarantee is achieved by ensuring that the data displayed on the blue background has never passed through an LLM (or any non-deterministic AI model). The AI chooses which section of source material to quote, but the retrieval of that text is a traditional non-AI database lookup. The only way to guarantee that an LLM has not transformed text is to never send it through the LLM in the first place.
 
@@ -167,13 +167,13 @@ The simplest way to achieve this is to take a typical RAG pipeline and make some
 
 Here is a typical RAG pipeline:
 
-![/assets/deterministic-quoting/RAG-pipeline.png]
+!(/assets/deterministic-quoting/RAG-pipeline.png)
 
 Note how the retrieved source material passes through the LLM - and is therefore liable to be transformed (hallucinated) before it is shown to the user.
 
 We want to fix this by adding a “deterministic lookup” of quotes after all calls to the LLM are complete. Note how the new modules are added _after_ the LLM.
 
-![/assets/deterministic-quoting/RAG-pipeline-with-DQ.png]
+!(/assets/deterministic-quoting/RAG-pipeline-with-DQ.png)
 
 To achieve this, we make six changes to the original:
 
@@ -190,7 +190,7 @@ We add two constraints to the document “chunker” - the module that splits ou
 
 First, we prefer smaller chunks that are easily displayed in and around the LLM’s commentary. In RAG with current-generation LLMs, chunks are often quite large - a page of text or more. But this simple implementation of DQ only displays whole chunks, not parts. A whole page for each quote would often be too much for users to conveniently parse, so paragraph-sized are preferred. Of course, the LLM can still quote several consecutive paragraphs where relevant.
 
-![/assets/deterministic-quoting/3.png]
+!(/assets/deterministic-quoting/3.png)
 
 Second, we want chunk boundaries to be logical to a user: displaying cut-off pieces of a section could be confusing. Such “semantic chunking” can be tedious[^4], depending heavily on the source material structure and format. However, it does seem to provide an improvement in the quality of some answers, presumably because there is semantic value in the structure of the document.
 
@@ -274,7 +274,7 @@ To complete our minimalist implementation of DQ, we modify the GUI to clearly di
 * label it as deterministically generated
 * add a link to the source
 
-![/assets/deterministic-quoting/4.png]
+!(/assets/deterministic-quoting/4.png)
 
 ---
 
