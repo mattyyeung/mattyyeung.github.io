@@ -21,13 +21,13 @@ We think Deterministic Quoting is an “enabler” for deploying LLMs where ther
 Many LLM systems can be designed to deterministically quote. This article provides motivation and explains a basic implementation.
 
 #### Contents: 
-1. [Hallucinations Matter](#hallucinations-matter)
-1. [Introducing Deterministic Quoting](#introducing-deterministic-quoting)
-1. [How Well Does It Work?](#how-well-does-it-work)
-1. [Applications](#applications)
-1. [Technical Details: How is it Implemented?](#technical-details-how-is-it-implemented)
-1. [Beyond the Minimalist Implementation](#beyond-the-minimalist-implementation)
-1. [Conclusion: Is This Really Ready For Healthcare?](#conclusion-is-this-really-ready-for-healthcare)
+1. [Hallucinations Matter](#1-hallucinations-matter)
+1. [Introducing Deterministic Quoting](#2-introducing-deterministic-quoting)
+1. [How Well Does It Work?](#3-how-well-does-it-work)
+1. [Applications](#4-applications)
+1. [Technical Details: How is it Implemented?](#5-technical-details-how-is-it-implemented)
+1. [Beyond the Minimalist Implementation](#6-beyond-the-minimalist-implementation)
+1. [Conclusion: Is This Really Ready For Healthcare?](#7-conclusion-is-this-really-ready-for-healthcare)
 
 ---
 

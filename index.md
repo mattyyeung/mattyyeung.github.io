@@ -20,4 +20,4 @@ layout: default
 
 <!-- - ### [MicroGEM Sal6830™](/sal6830) -->
 
-- ### [Clap Toaster](/clap-toaster)
+- ### [The Clap Toaster](/the-clap-toaster)
