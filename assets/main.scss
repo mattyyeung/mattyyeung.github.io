@@ -5,6 +5,7 @@
 @import "minima";
 
 
+/* MY custom styles here */
 
 
 hr {
@@ -19,3 +20,8 @@ hr {
   @include relative-font-size(0.7);
 }
 
+
+/* Hide the hamburger menu on mobile which does nothing since it's empty (note: in future if adding links to top then might need to change this) */
+.site-nav {
+	display: none;
+}
