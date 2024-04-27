@@ -3,8 +3,9 @@ layout: post
 title: "Healthcare needs trustworthy LLMs: Deterministic Quoting can help"
 ---
 
+<!-- todo: damian's 2 fedbacks -->
 
-Hallucinations are a barrier to adopting LLMs in mission-critical applications like healthcare.
+LLMs have the potential to revolutionise many areas of healthcare, but currently the fear and reality of hallucinations prevent adoption. 
 
 At [Invetech](https://www.invetechgroup.com/), we’re working on “Deterministic Quoting”, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
@@ -12,22 +13,25 @@ At [Invetech](https://www.invetechgroup.com/), we’re working on “Determinist
 
 In this example, everything displayed with a blue background is guaranteed to be _verbatim_ from source material. No hallucinations. LLMs remain imperfect, so it may still choose to quote the _wrong part_ of the source material, but only “real” quotations are displayed on blue - they are deterministically generated.
 
-We think Deterministic Quoting is an “enabler” for deploying LLM-based information retrieval systems in applications where there are serious consequences to incorrect information.
+We think Deterministic Quoting is an “enabler” for deploying LLMs where there are serious consequences to incorrect information, such as:
+- AIs that process medical records
+- AIs that assist in diagnosis 
+- AIs which reference medical guidelines 
 
 Many LLM systems can be designed to deterministically quote. This article provides motivation and explains a basic implementation.
-- Hallucinations Matter
-- Introducing Deterministic Quoting
-- How Well Does It Work?
-- Applications
-- Technical Details: How is it Implemented?
-- Beyond the Minimalist Implementation
-- Conclusion: Is This Really Ready For Healthcare?
+
+#### Contents: 
+1. [Hallucinations Matter](#hallucinations-matter)
+1. [Introducing Deterministic Quoting](#introducing-deterministic-quoting)
+1. [How Well Does It Work?](#how-well-does-it-work)
+1. [Applications](#applications)
+1. [Technical Details: How is it Implemented?](#technical-details-how-is-it-implemented)
+1. [Beyond the Minimalist Implementation](#beyond-the-minimalist-implementation)
+1. [Conclusion: Is This Really Ready For Healthcare?](#conclusion-is-this-really-ready-for-healthcare)
 
 ---
 
-## Hallucinations Matter
-
-Many organisations want to deploy LLMs with knowledge of their data and documentation. But in healthcare, the fear and reality of hallucinations prevent safe use.
+## 1. Hallucinations Matter
 
 ![](/assets/deterministic-quoting/hallucination.png)
 
@@ -44,36 +48,35 @@ In short, any information that passes through an LLM is potentially “tainted�
 
 ### So what?
 
-Naturally conservative fields like healthcare do not deploy systems that are reliable “most of the time”. Even a low rate of hallucination is enough to prevent adoption at scale. It’s unreasonable to expect users to bear the burden of independent verification – it would be inevitable that users fail to perform adequate checks.
+Naturally conservative fields like healthcare do not deploy systems that are reliable “most of the time”. In most healthcare applications, even a low rate of hallucination is enough to prevent adoption at scale. We can't burden users with the task of independent verification – mistakes are inevitable. 
 
 <!--TODO-->
 
 Eventually, LLM quality may be high enough to be trustworthy as-is, but this is not currently within sight. Until then…
 
-## Introducing: Deterministic Quoting
+## 2. Introducing: Deterministic Quoting
 
 Deterministic Quoting techniques bridge the LLM “trust gap”.
 
-Applications with Deterministic Quoting provide verbatim “ground-truth” information interspersed with LLM commentary. It combines the convenience and flexibility of the LLM with reliable, trustworthy data that is guaranteed to be hallucination-free. Users benefit from the framing and commentary but can easily verify the underlying assumptions any extra action.
+Applications with Deterministic Quoting provide verbatim “ground-truth” information interspersed with LLM commentary. It combines the convenience and flexibility of the LLM with trustworthy data that is guaranteed to be hallucination-free. Users benefit from the framing and commentary but can easily verify the underlying assumptions any extra action.
 
 ![](/assets/deterministic-quoting/2.png)
 
-The “hallucination-free” guarantee is achieved by ensuring that the data displayed on the blue background has never passed through an LLM (or any non-deterministic AI model). The AI chooses which section of source material to quote, but the retrieval of that text is a traditional non-AI database lookup. The only way to guarantee that an LLM has not transformed text is to never send it through the LLM in the first place.
+The “hallucination-free” guarantee is achieved by ensuring that the data displayed on the blue background has never passed through an LLM (or any non-deterministic AI model). The AI chooses which section of source material to quote, but the retrieval of that text is a traditional non-AI database lookup. That's only way to guarantee that an LLM has not transformed text: don't send it through the LLM in the first place.
 
 The approach is imperfect: the surrounding text (white background) has come directly from an LLM and therefore may still be hallucinated. Or, the AI can choose an irrelevant (but still verbatim) quote to display. Still, the result is a significant improvement: users report intuitively grasping the difference between trusted quotations and prose generated by the LLM.
 
-## How well does it work?
+## 3. How well does it work?
 
-In practice, our Deterministic Quoting (DQ) techniques meet the stated goal of “zero false positives” for any quoted text. That is, 100% of all text displayed in the special quote box (the blue background in the examples) is indeed verbatim, not hallucinated.
+In practice, we meet the stated goal of “zero false positives” for any quoted text. That is, 100% of all text displayed in the special quote box (the blue background in the examples) is indeed verbatim, not hallucinated.
 
 In addition, several other metrics are useful:
-
 
 * Are there hallucinations in the non-DQ prose? (ie. white background)
 * Was the right quote/data chosen by the LLM? Is it relevant to the question?
 * Is user’s query ultimately answered correctly?
 
-Here, however, DQ is only part of the story - the underlying LLM remains the limiting factor for quality. We don’t expect DQ to improve these metrics, our goal is to avoid regressions.
+Here, the underlying LLM remains the limiting factor for quality, DQ is only part of the story. We don’t expect DQ to improve these metrics, our goal is to avoid regressions.
 
 Here are some results comparing a standard RAG pipeline (Llamaindex + ChatGPT 4) with a modified version with a minimalistic implementation of DQ.
 
@@ -145,7 +148,7 @@ Here are some results comparing a standard RAG pipeline (Llamaindex + ChatGPT 4)
 
 This data is consistent with other experiments we have run: adding DQ does not appear to degrade the overall quality of answers. If anything, answer quality may slightly improve.
 
-## Applications
+## 4. Applications
 
 DQ techniques can benefit anywhere that hallucinations are problematic – typically Information Retrieval (eg RAG) and related systems. Some hypothetical examples:
 <!-- TODO more! -->
@@ -153,11 +156,11 @@ DQ techniques can benefit anywhere that hallucinations are problematic – typic
 * an educational aid that allows students to query textbooks or other study material
 * a legal assistant with knowledge of case law
 
-In all these cases, there are serious consequences to hallucinations.
+In all these cases, there are serious consequences to hallucinations. <!-- tODO-->
 
 ---
 
-## Technical Details: How is it Implemented?
+## 5. Technical Details: How is it Implemented?
 
 While implementations will vary, DQ fundamentally involves a sending LLM outputs to a separate module that replaces potentially-hallucinated quotations with verbatim copies direct from the source material. This replacement is a traditional non-AI database query, that is, it’s “deterministic”.
 
@@ -250,7 +253,7 @@ When citing, we instruct the LLM to start with the unique reference string in a 
 
 The only change to retrieval is the format used when inserting into LLM context. We use the same format we want the LLM to output – including the unique reference string from above inside &lt;title> tags. This provides the LLM with examples of the preferred format without eating up valuable context space. An example:
 
-```
+```xml
 <quote>
    <title>ICD-10 Version:2019 - Chapter VI Diseases of the nervous system - G43.1</title>
    G43.1 Migraine with aura [classical migraine]
@@ -278,7 +281,7 @@ To complete our minimalist implementation of DQ, we modify the GUI to clearly di
 
 ---
 
-## Beyond the Minimalist Implementation
+## 6. Beyond the Minimalist Implementation
 
 While the implementation above is a useful explainer there are many opportunities for improvement. 
 <!---TODO: explain these briefly-->
@@ -297,7 +300,7 @@ DQ isn’t limited to RAG systems. However, implementation can be more cumbersom
 
 For example, upcoming models from Google et al. [can fit whole books in context](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) - enough to make RAG unnecessary for small corpuses. They still hallucinate, so Deterministic Quoting remains beneficial, but the source data must be chunked (ideally semantically) and indexed as it was in RAG.
 
-## Conclusion: Is this Really Ready for Healthcare?
+## 7. Conclusion: Is this Really Ready for Healthcare?
 
 <!--TODO. Ideas:
 - Hallucinations remain an unsolved problem, but deterministic quoting may open up new application spaces for LLMs.
