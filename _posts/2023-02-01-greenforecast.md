@@ -15,16 +15,14 @@ Currently, there's no simple way to track renewable energy output in real-time, 
 
 ![GreenForecast.au screenshot, showing a 7-day forecast of greenness and wholesale power price](assets/greenforecast_screenshot.png)
 
-It uses modern data science and machine learning techniques to predict "Greenness" for the next week for all 5 NEM regions. Updated every 2 hours, the forecast can help you find the best time to schedule discretionary electricity loads, potentially cutting the carbon footprint of your electricity by half - or even more.
+It uses modern data science and machine learning techniques to predict "Greenness" for the next week for all 5 NEM regions. Updated every 2 hours, the forecast can help you find the best time to schedule discretionary electricity loads, potentially cutting the carbon footprint of that electricity by half.
 
-At this point, many ask "Does shifting my electricity usage from one part of the week to another actually reduce my carbon footprint?". The short answer is "yes", but the complete rationale involves a surprising level of complexity. See [here](/greenforecast-energy-details#is-your-carbon-footprint-really-lowered-by-using-at-times-of-high-greenness) for the details. 
-
-[https://greenforecast.au](https://greenforecast.au)
+At this point, many ask "Does shifting my electricity usage from one part of the week to another actually reduce my carbon footprint?". The short answer is "yes", but the complete rationale involves a surprising level of complexity. See [here](/greenforecast-energy-details#is-your-carbon-footprint-really-lowered-by-using-at-times-of-high-greenness) for the technical details. 
 
 ---
 
 #### Related:
-- [greenforecast.au](http://greenforecast.au/)
+- Visit [greenforecast.au](http://greenforecast.au/)
 - [GreenForecast Details for Energy People](/greenforecast-energy-details)
 - [GreenForecast Details for Tech People](/greenforecast-tech-details)
 

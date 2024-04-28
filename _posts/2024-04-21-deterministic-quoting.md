@@ -5,7 +5,7 @@ title: "Healthcare needs trustworthy LLMs: Deterministic Quoting can help"
 
 <!-- todo: damian's 2 fedbacks -->
 
-LLMs have the potential to revolutionise many areas of healthcare, but currently the fear and reality of hallucinations prevent adoption. 
+LLMs have the potential to revolutionise healthcare, but currently the fear and reality of hallucinations prevent adoption in most applications. 
 
 At [Invetech](https://www.invetechgroup.com/), we’re working on “Deterministic Quoting”, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
@@ -40,11 +40,11 @@ All current LLMs hallucinate.
 * The biggest models from OpenAI, Google, Anthropic etc. hallucinate more than 30% of the time for some use-cases <!--TODO-->
 * It’s safe to assume that the next generation (ChatGPT “5”, Gemini 1.5 Ultra, etc.) will continue to hallucinate, albeit at a lower rate
 * Some LLMs are trained/prompted to cite sources… but these citations themselves can also be hallucinated! This can be particularly problematic: users are more likely to trust authoritative-looking citations
-* At least [one system](https://gemini.google.com/) offers a function to verify claims by querying a search engine, but this still requires vigilance from the user
-* “Check your own answer” iterative methods can sometimes reduce the rate of hallucinations but only partially.
-* Attaching relevant source material to the query (RAG) appears better than relying on training (due to [catastrophic forgetting](https://en.wikipedia.org/wiki/Catastrophic_interference)), but even still the material is sometimes transformed when quoted in the output. 
+<!-- * At least [one system](https://gemini.google.com/) offers a function to verify claims by querying a search engine, but this still requires vigilance from the user -->
+* “Check your own answer” iterative methods can reduce the rate of hallucinations, but only partially.
+* Attaching relevant source material to the query ([RAG](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)) appears better than relying on training (due to [catastrophic forgetting](https://en.wikipedia.org/wiki/Catastrophic_interference)), but even still the material is sometimes transformed when quoted in the output. 
 
-In short, any information that passes through an LLM is potentially “tainted”.
+In short: any information that passes through an LLM is potentially “tainted”.
 
 ### So what?
 
@@ -78,8 +78,8 @@ In addition, several other metrics are useful:
 
 Here, the underlying LLM remains the limiting factor for quality, DQ is only part of the story. We don’t expect DQ to improve these metrics, our goal is to avoid regressions.
 
-Here are some results comparing a standard RAG pipeline (Llamaindex + ChatGPT 4) with a modified version with a minimalistic implementation of DQ.
-
+Here are some preliminary results comparing a standard RAG pipeline (Llamaindex + ChatGPT 4) with a modified version with a minimalistic implementation of DQ. N=60 on non-public dataset.
+<!-- 
 <table>
   <tr>
    <td>
@@ -145,18 +145,27 @@ Here are some results comparing a standard RAG pipeline (Llamaindex + ChatGPT 4)
    </td>
   </tr>
 </table>
+ -->
+
+||**Baseline**|**Goal**|**With DQ**|
+|Hallucinations in blue box:|N/A|0|**0**|
+|Hallucinations outside blue box:|12%|Better than baseline|2%|
+|Was the quote/data relevant?|90%|Baseline|92%|
+|Is the user’s query answered?|83%|Baseline|88%|
 
 This data is consistent with other experiments we have run: adding DQ does not appear to degrade the overall quality of answers. If anything, answer quality may slightly improve.
 
 ## 4. Applications
 
-DQ techniques can benefit anywhere that hallucinations are problematic – typically Information Retrieval (eg RAG) and related systems. Some hypothetical examples:
+DQ techniques can benefit anywhere that hallucinations are problematic – typically Information Retrieval (eg RAG) and related systems. Some potential examples:
 <!-- TODO more! -->
-* an assistant to front-line medical staff with knowledge of best-practice diagnosis and treatment for common conditions
-* an educational aid that allows students to query textbooks or other study material
-* a legal assistant with knowledge of case law
+- a pharmacist discussing drug interactions and side effects with an AI assistant
+- an anxious patient doesn't get through all of their questions in the 7 minutes they have with their surgeon but has all the time in the world to discuss with a knowledgable AI assistant
+- a doctor asks the medical records system if a patient has a history of heart conditions - it responds with a summarised list 
+- an assistant to front-line medical staff with knowledge of best-practice diagnosis and treatment for common conditions
+- an educational aid that allows students to query textbooks or other study material
 
-In all these cases, there are serious consequences to hallucinations. <!-- tODO-->
+Proof-of-concept demonstations already exist - organisations are clearly excited about the potential for these systems. But in most of these, there are serious consequences to hallucinations. Few are currently reliable enough to deploy at scale. 
 
 ---
 
@@ -170,13 +179,13 @@ The simplest way to achieve this is to take a typical RAG pipeline and make some
 
 Here is a typical RAG pipeline:
 
-![](/assets/deterministic-quoting/RAG-pipeline.png)
+![](/assets/deterministic-quoting/RAG-pipeline.svg)
 
 Note how the retrieved source material passes through the LLM - and is therefore liable to be transformed (hallucinated) before it is shown to the user.
 
 We want to fix this by adding a “deterministic lookup” of quotes after all calls to the LLM are complete. Note how the new modules are added _after_ the LLM.
 
-![](/assets/deterministic-quoting/RAG-pipeline-with-DQ.png)
+![](/assets/deterministic-quoting/RAG-pipeline-with-DQ.svg)
 
 To achieve this, we make six changes to the original:
 
@@ -280,12 +289,29 @@ To complete our minimalist implementation of DQ, we modify the GUI to clearly di
 ![](/assets/deterministic-quoting/4.png)
 
 ---
-
 ## 6. Beyond the Minimalist Implementation
 
 While the implementation above is a useful explainer there are many opportunities for improvement. 
-<!---TODO: explain these briefly-->
-- DQ for user inputs too
+
+#### Reducing the rate of irrelevant answers and omissions
+- reject answers that fail to use deterministic quoting
+- detect if the answer fails to answer the question (imperfect, because an LLM is used to do this)
+- replace the "unique reference string matching" with more sophisticated method of matching the quote selected by the LLM to the ground-truth database
+
+#### Presenting information the LLMs in a more machine-understandable manner
+- "semantic chunking" of input documentation
+- Diagrams, charts and tables are notoriously difficult for AI systems to understand. DQ has its own challenges with these, though they are much easier to solve than the general problem faced by all RAG systems
+- iterative calls to the LLM to narrow down source material
+- customising parsing and chunking to the dataset, or even changing dataset format to suit the LLM
+These can also improve "vanilla" RAG systems. 
+
+#### Non-RAG Applications
+
+DQ isn’t limited to RAG systems. However, implementation can be more cumbersome because some parts of the RAG pipeline (eg chunking) are required for DQ.
+
+For example, upcoming models from Google et al. [can fit whole books in context](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) - enough to make RAG unnecessary for small corpuses. They still hallucinate, so Deterministic Quoting remains beneficial, but the source data must be chunked (ideally semantically) and indexed as it was in RAG.
+
+<!-- - DQ for user inputs too
 - Top-K algorithm also inserts nearby chunks - instead of overlapping chunks
 - screenshots of docs
 - tables
@@ -295,15 +321,24 @@ While the implementation above is a useful explainer there are many opportunitie
 - allow user to ask for quotes
 - more sophisticated processing of the LLM output to determine which chunks are being quoted. Instead of using the unique reference string, blocks of text can be sent to the embeddings model to determine the best match.
 - iterative calls to LLM to narrow down from a large chunk to a smaller one that is suitable for displaying inline. Still needs to be deterministically generated before display.
+ -->
 
-DQ isn’t limited to RAG systems. However, implementation can be more cumbersome because some parts of the RAG pipeline (eg chunking) are required for DQ.
-
-For example, upcoming models from Google et al. [can fit whole books in context](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) - enough to make RAG unnecessary for small corpuses. They still hallucinate, so Deterministic Quoting remains beneficial, but the source data must be chunked (ideally semantically) and indexed as it was in RAG.
 
 ## 7. Conclusion: Is this Really Ready for Healthcare?
+
+Deterministic Quoting helps to bridge the LLM "trust gap". Combining the flexibility of LLMs with the reliability of non-AI quote lookups, DQ gives users confidence in the "ground truth" data assumed by the AI. 
+
+Advanced versions of the technique are still under development, but even basic implementations show significant improvement over the current state-of-the-art. Future versions can provide further improvements to quality of answers and flexibility when parsing a wide range of input documentation. 
+
+For some applications, a basic DQ implementation may be the difference between a proof-of-concept and a system enough trustworthiness to deploy into production. For others, there is still work to be done before we can demonstrate sufficient safety. In all cases, it is clear that some variation of DQ will remain useful as long as models continue to hallucinate. 
+
 
 <!--TODO. Ideas:
 - Hallucinations remain an unsolved problem, but deterministic quoting may open up new application spaces for LLMs.
 - Many AI systems can be designed to “Deterministically Quote”.
 - Some variation of DQ will remain useful as long as models hallucinate - even at a low rate.
-- More sophisticated systems don’t just discard this text, it can (marginally) improve “are-we-looking-up-the-right-thing accuracy”-->
+- More sophisticated systems don’t just discard this text, it can (marginally) improve “are-we-looking-up-the-right-thing accuracy”
+
+We look forward to a time when the fantastic potential of LLMs can be safely deployed in mission-critical applications like healthcare. 
+
+-->
