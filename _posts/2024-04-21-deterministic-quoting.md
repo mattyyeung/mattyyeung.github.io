@@ -137,7 +137,7 @@ First, we prefer smaller chunks that are easily displayed in and around the LLM�
 
 ![](/assets/deterministic-quoting/3.png)
 
-Second, we want chunk boundaries to be logical to a user: displaying cut-off pieces of a section could be confusing. Such “semantic chunking” can be tedious[^4], depending heavily on the source material structure and format. However, it does seem to provide an improvement in the quality of some answers, presumably because there is semantic value in the structure of the document.
+Second, we want chunk boundaries to be logical to a user: displaying cut-off pieces of a section could be confusing. Such “semantic chunking” can be tedious, depending heavily on the source material structure and format. However, it does seem to provide an improvement in the quality of some answers, presumably because there is semantic value in the structure of the document.
 
 Like most ML systems, source data preparation and chunking are often the most time consuming to implement.
 
