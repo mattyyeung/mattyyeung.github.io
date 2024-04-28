@@ -112,13 +112,13 @@ The simplest way to achieve this is to take a typical RAG pipeline and make some
 
 Here is a typical RAG pipeline:
 
-![](/assets/deterministic-quoting/RAG-pipeline.svg)
+![](/assets/deterministic-quoting/RAG-pipeline.png)
 
 Note how the retrieved source material passes through the LLM - and is therefore liable to be transformed (hallucinated) before it is shown to the user.
 
 We want to fix this by adding a “deterministic lookup” of quotes after all calls to the LLM are complete. Note how the new modules are added _after_ the LLM.
 
-![](/assets/deterministic-quoting/RAG-pipeline-with-DQ.svg)
+![](/assets/deterministic-quoting/RAG-pipeline-with-DQ.png)
 
 To achieve this, we make six changes to the original:
 
