@@ -43,7 +43,7 @@ show_excerpts: false
 permalink: /:categories/:title
 
 # google analytics id (using GA-4 not the older UA)
-google_analytics: G-TJRLGRZSWJ
+google_analytics: G-HYQ342KVQ9
 
 # Minima specific settings, which are only available from Minima 3.0 onward.
 minima:
