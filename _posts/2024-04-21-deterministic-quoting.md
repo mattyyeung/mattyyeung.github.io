@@ -5,7 +5,7 @@ title: "Healthcare needs trustworthy LLMs: Deterministic Quoting can help"
 
 <!-- todo: damian's 2 fedbacks -->
 
-LLMs have the potential to revolutionise healthcare, but currently the fear and reality of hallucinations prevent adoption in most applications. 
+[LLM](https://en.wikipedia.org/wiki/Large_language_model)s have the potential to revolutionise healthcare, but the fear and reality of hallucinations prevent adoption in most applications. 
 
 At [Invetech](https://www.invetechgroup.com/), we’re working on “Deterministic Quoting”, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
@@ -74,7 +74,7 @@ In addition, several other metrics are useful:
 
 * Are there hallucinations in the non-DQ prose? (ie. white background)
 * Was the right quote/data chosen by the LLM? Is it relevant to the question?
-* Is user’s query ultimately answered correctly?
+* Is user’s query answered?
 
 Here, the underlying LLM remains the limiting factor for quality, DQ is only part of the story. We don’t expect DQ to improve these metrics, our goal is to avoid regressions.
 
