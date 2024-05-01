@@ -3,16 +3,21 @@ layout: page
 ---
 
 
-<!-- title: "My Front Path Piano" -->
+<!-- title: "The Piano Path Project" -->
 
+
+<!-- <video style="max-width: 100%; height: auto;" width="640" height="480" controls autoplay muted loop>
+<source src="/assets/clap_toaster.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+</video> -->
 
 I turned my front path into a light-up keyboard:
 ![]()
 
-It looks pretty cool at night:
+Piano mode:
 ![]()
 
-Piano mode:
+It looks pretty cool at night:
 ![]()
 
 BIG Piano:
@@ -27,9 +32,41 @@ Daft Punk mode: (at night!!)
 Open door ("welcome mode?")
 ![]()
 
+Designed and built from scratch, using *mostly* recycled stuff from work. 
+
+
+It took about 9 months worth of "hobby time" all-up, roughly equal parts:
+- experimenting 
+- iterating the chosen design
+- building & waterproofing(!!) the steps
+- integration and fixing problems
+- landscaping
+
+
+
+
+My original budget was $250... because "*really, who can justify spending money on front path lights*". Blew RIGHT through that... probably $1000 all-up. But would have been a lot more (3-5x?)if I bought everything new!
+
+
+
+
+This one is close to my heart (and soul)...
+
+In 20xx a mate and I made a viral video, eventually resulting in Microsoft creating an unsuccessful XBox Kinect game based on our concept. 
+
+The idea came from an earlier project with an XBox kinect that eventually resulted in Microsoft releasing an unsuccessful XBox Kinect game.
+
+
+### How it works
+
+Imagine a set of (waterproof) bathroom scales underneath each paver. Glue on outdoor LED strips. For the 5 steps up to the patio, add an IR tripwire sensor and downlights to match. Add some electronics for brains & power distribution and write some software to run it all. Then, "just add waterproofing". But actually, quadruple the amount of waterproofing you're imagining. That's about it! Easy!
+
+For technical details, see below...
+
+
 ## FAQs
 - Why??? 
-- *How?* Lots of trial and error. see below - key ingredients: trial, error, recycled stuff from the bin at work, waterproofing supplies, open source SW, cheap electronics, 3D prints,
+- *How?* I built it, from scratch. The key ingredients were *lots* of trial and error. Also, recycled stuff from the bin at work, waterproofing supplies, open source SW, cheap electronics, 3D prints and landscaping supplies.
 - *How long?* Around 6 months worth of "hobby time". Perhaps a quarter of it experimenting with different technologies, one quarter iterating the chosen design, one quarter building/waterproofing steps and one quarter integration and fixing issues. The biggest surprise to me was "outdoor-proofing" - making 23x2 pieces of electronics robust to complete submersion, UV and 50C temperature swings - took a LONG time. 
 - How did you learn to do all this? I'm an engineer. Which is to say, I googled a bunch of stuff and asked for a bunch of advice - *How much?* Original goal: $250, relying mostly on recycled components. Blew RIGHT through that... probably $1000. But would have been a lot more (3-5x?)if I bought everything new
 - *Do you leave it on all the time?* It's often on 'silent mode' between 8.30am and 8.30pm, unless it's down for "maintenance"
@@ -40,7 +77,7 @@ Open door ("welcome mode?")
 - *You could sell this!* This is just for fun. 
 - *No really, I would really really really like to buy one* Sorry. I would consider it if you're willing to make a large donation to thelifeyoucansave.org, pay costs and you're very patient. 
 - *I live nearby, can I take video?*  Sure, if you don't post on social media... it's our home. 
-- *Can I copy?* Sure! All the design files are on github, CC-BY license. Send me a photo I'd love to see it. Link to this page for attribution. 
+- *Can I copy?* Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd love to see it (and post it here if you like!). Link to this page for attribution. 
 
 ### What was hard
 - Foam
@@ -134,9 +171,9 @@ Goal: can play a key twice in succession, eg fast enough to play the mario theme
 
 ### Ideas for "Next time" - what would I do differently?
 
-Waterproofing and UV-proofing took *weeks* longer than I expected. Normally everything I design is used indoors! If I was willing to spend more I could replace all the pavers with a thinner tile, enabling a new design for under-tile: a water-tight flat 'box' with transparent sides containing load cells, LEDs and maybe microprocessor. Seems like a heavy lift to make 17 of those but would likely be no more effort than I spent adhering and sealing everything. The compromise would be price these custom boxes and needing to replace all pavers in the yard, even the ones without sensors. 
+Waterproofing and UV-proofing took *weeks* longer than I expected. Normally everything I design is used indoors! If I was willing to spend more I could replace all the pavers with a thinner tile, enabling a new design for under-tile: a water-tight flat 'box' with transparent sides containing load cells, LEDs and maybe microprocessor. Seems like a heavy lift to make 17 of those but would likely be no more effort than I spent adhering and sealing everything. The compromise would be the price of these custom boxes and needing to replace all pavers in the yard, even the ones without sensors. 
 
-Hard to say whether "one node per 6 steps" was a net benefit over a fully-distributed one-microprocessor-per-step. I think it's just grass-is-greener. Making the node boxes waterproof and running trunk cabling was more effort than expected, but waterproofing 17 microprocessors and cable entries for those would have also been tough. Though at scale, distributed would be the way to go. Put the load cell amp and an ESP32 in a waterproof housing with a custom PCB instead of wiring. Daisychain power and comms in waterproof glands. More design work but would be quickly amortized.
+Hard to say whether "one node per 6 steps" was a net benefit over a fully-distributed one-microprocessor-per-step. Making the node boxes waterproof and running trunk cabling was more effort than expected, but waterproofing 17 microprocessors and cable entries for those would have also been tough. I think it's just grass-is-greener doubt. Though at scale, distributed is the way to go. Put the load cell amp and an ESP32 in a waterproof housing with a custom PCB instead of wiring. Daisychain power and comms in waterproof glands. More design work but would be quickly amortized.
 
 I avoided a custom PCB for the node boxes by finding pre-built modules, but would have been fun. I underestimated the time to hand-wire everything together (as usual) so it wouldn't have been too much extra effort to design a PCB to solder all the modules to. 
 
