@@ -101,7 +101,7 @@ Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd 
 ## Technical Details
 
 ### Architecture:
-![PianoPath Architecture](/assets/piano-path/architecture.png)
+![Piano Path Architecture](/assets/piano-path/architecture.png)
 
 ### Exploded view of one paver:
 ![Exploded view of one paver](/assets/piano-path/paver-exploded.png)
@@ -120,12 +120,12 @@ Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd 
     - Low latency from keypress to hearing sound - <100ms  <span class="green-text">✓</span>  stretch: 30ms <span class="red-text">✗</span>
 1. Can be safely left on all the time  <span class="green-text">✓</span>
 1. The "before" and "after" photo look the same   <span class="green-text">✓</span>
-    - no big boxes or lights bulging  ☐ almost
+    - no big boxes or lights bulging  <span class="green-text">(✓)</span>
     - Keep original pavers  <span class="green-text">✓</span>
 1. Warm-white lights only - colour would be fun but too garish  <span class="green-text">✓</span>
 1. Stretch goal: responsive enough to play a key twice in quick succession (eg mario has quavers at 180bpm ~= 150ms)  <span class="green-text">✓</span>
 1. Recycled components (from the bin at work) as much as possible  <span class="green-text">✓</span>
-1. Cheap - <s>$200-300.</s> <span class="red-text">✗</span>  <s>$500.</s> <span class="red-text">✗</span>  <s>$700.</s> <span class="red-text">✗</span>  $1000. <span class="green-text">✓</span>
+1. Cheap: <s>$200-300</s> <span class="red-text">✗</span>  <s>$500</s> <span class="red-text">✗</span>  <s>$700</s> <span class="red-text">✗</span>  $1000 <span class="green-text">✓</span>
 1. Done in <s>a couple of weeks.</s><span class="red-text">✗</span>  <s>3 months.</s><span class="red-text">✗</span>  <s>Before August.</s><span class="red-text">✗</span>  <s>Before Christmas.</s><span class="red-text">✗</span> Real soon now<span class="green-text">✓</span>
 1. Stretch goal: 5 year design life 
 
