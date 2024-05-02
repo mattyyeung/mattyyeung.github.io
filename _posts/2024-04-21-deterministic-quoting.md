@@ -272,7 +272,7 @@ For some applications, a basic DQ implementation may be the difference between a
 
 <div class="grey-box">
 Contributors: Chris Herring, Lars Katzfey & I. We work at <a href="https://www.invetechgroup.com/">Invetech</a><br>
-Contact: <a href="https://www.linkedin.com/in/matt-yeung-86185039/">LinkedIn</a> or <a href="mailto:matthew.yeung@invetech.com.au">email</a>
+Contact: <a href="https://www.linkedin.com/in/matt-yeung-86185039/">LinkedIn</a> or mail matthew dot yeung at invetechgroup.com
 </div>
 
 
