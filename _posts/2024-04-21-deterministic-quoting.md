@@ -249,7 +249,8 @@ DQ isn’t limited to RAG systems. However, implementation can be more cumbersom
 
 For example, upcoming models from Google et al. [can fit whole books in context](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/) - enough to make RAG unnecessary for small corpuses. They still hallucinate, so Deterministic Quoting remains beneficial, but the source data must be chunked (ideally semantically) and indexed as it was in RAG. 
 
-<!-- - DQ for user inputs too
+<!-- 
+- DQ for user inputs too
 - Top-K algorithm also inserts nearby chunks - instead of overlapping chunks
 - screenshots of docs
 - tables

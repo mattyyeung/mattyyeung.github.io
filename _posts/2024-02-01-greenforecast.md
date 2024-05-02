@@ -15,11 +15,11 @@ That's why I built **[greenforecast.au](https://greenforecast.au), an AI-powered
 
 [![GreenForecast.au screenshot, showing a 7-day forecast of greenness and wholesale power price](assets/greenforecast_screenshot.png)](http://greenforecast.au/)
 
-It uses "AI" (ie. modern data science and machine learning techniques) to predict "Greenness" for the next week for all 5 NEM regions. Updated every 2 hours, the forecast can help you find the best time to schedule discretionary electricity loads, potentially cutting the carbon footprint of that electricity by half. 
+It uses "AI" (ie. an ensemble of modern data science and machine learning techniques) to predict "Greenness" for the next week for all 5 NEM regions. Updated every 2 hours, the forecast can help you find the best time to schedule discretionary electricity loads, potentially cutting the carbon footprint of that electricity by half. 
 
 At this point, many ask "Does shifting my electricity usage from one part of the week to another actually reduce my carbon footprint?". The short answer is "yes", but the complete rationale involves a surprising level of complexity. See [here](/greenforecast-energy-details#is-your-carbon-footprint-really-lowered-by-using-at-times-of-high-greenness) for the technical details. 
 
-You view the website for no cost, no account required. It's [open source](https://github.com/mattyyeung/GreenForecastPublic) too. 
+You view the website for no cost, no account required. You can also check out the source [on github](https://github.com/mattyyeung/GreenForecastPublic) too. 
 
 If you find it useful, I'd love to hear about it! info[AT]greenforecast.au or @GreenForecastAu on twitter.
 
