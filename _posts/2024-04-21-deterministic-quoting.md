@@ -271,8 +271,8 @@ Advanced versions of the technique are still under development, but even basic i
 For some applications, a basic DQ implementation may be the difference between a proof-of-concept and a system with enough trustworthiness to deploy into production. For others, there is still work to be done before we can demonstrate sufficient safety. In all cases, it is clear that some variation of DQ will remain useful as long as models continue to hallucinate. 
 
 <div class="grey-box">
-<p>Contributors: Chris Herring, Lars Katzfey & I. We work at <a href="https://www.invetechgroup.com/">Invetech</a></p>
-<p>Contact: <a href="https://www.linkedin.com/in/matt-yeung-86185039/">LinkedIn</a> or <a href="mailto:matthew.yeung@invetech.com.au">email</a></p>
+Contributors: Chris Herring, Lars Katzfey & I. We work at <a href="https://www.invetechgroup.com/">Invetech</a><br>
+Contact: <a href="https://www.linkedin.com/in/matt-yeung-86185039/">LinkedIn</a> or <a href="mailto:matthew.yeung@invetech.com.au">email</a>
 </div>
 
 
