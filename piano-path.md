@@ -72,7 +72,7 @@ I'm an engineer. Which is to say, I googled a bunch and asked a bunch of advice
 It's often on 'silent mode' between 8.30am and 8.30pm, unless it's down for "maintenance"
 
 **Does it use much power?**<br>
-under 10W in idle, around 1/20th of my fridge
+Under 10W in idle, around 1/20th of my fridge
 
 **Can it play my fav song XYZ?**<br>
 Surprisingly few songs sound ok cut up into 23 little chunks, but sure anything is possible 
@@ -90,7 +90,7 @@ Yeah nah, it's just for fun.
 Sorry. I would consider it if you're willing to make a large donation to [thelifeyoucansave.org.au](http://thelifeyoucansave.org.au), pay the costs and you're very patient. 
 
 **I live nearby, can I take video?**<br>
-Sure, if you don't post on social media... it's our home. 
+Sure, if you *don't post on social media at all*... this is our home!
 
 **Can I copy?**<br>
 Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd love to see it (and post it here if you like!). Link to this page for attribution. 
@@ -98,36 +98,36 @@ Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd 
 
 ---
 
-## Technical Details
+# Technical Details
 
 ### Architecture:
 ![PianoPath Architecture](/assets/piano-path/architecture.png)
 
 ### Exploded view of one paver:
-![PianoPath Architecture](/assets/piano-path/paver-exploded.png)
+![Exploded view of one paver](/assets/piano-path/paver-exploded.png)
 
 ### Design Goals:
-- Steps that light up!
+1. Steps that light up!
     - 17x pavers + 6x steps up to the front door  <span class="green-text">✓</span>
     - Young kids and adults detectable. Stretch goal: 4kg cat  <span class="green-text">✓</span>
     - Lights visible during day (direct sun) and night  <span class="green-text">✓</span>
     - Can turn all lights on - to allow people to see at night  <span class="green-text">✓</span>
-- Sounds 
+1. Sounds 
     - Piano mode  <span class="green-text">✓</span>
     - Scales: major/minor/pentatonic  <span class="green-text">✓</span>
     - Synth patches (.sf2)  <span class="green-text">✓</span>
     - "song mode" that plays a track as you walk down the path  <span class="green-text">✓</span>
     - Low latency from keypress to hearing sound - <100ms  <span class="green-text">✓</span>  stretch: 30ms <span class="red-text">✗</span>
-- Can be safely left on all the time  <span class="green-text">✓</span>
-- The "before" and "after" photo look the same   <span class="green-text">✓</span>
+1. Can be safely left on all the time  <span class="green-text">✓</span>
+1. The "before" and "after" photo look the same   <span class="green-text">✓</span>
     - no big boxes or lights bulging  ☐ almost
     - Keep original pavers  <span class="green-text">✓</span>
-- Warm-white lights only - colour would be fun but too garish  <span class="green-text">✓</span>
-- Stretch goal: responsive enough to play a key twice in quick succession (eg mario has quavers at 180bpm ~= 150ms)  <span class="green-text">✓</span>
-- Recycled components (from the bin at work) as much as possible  <span class="green-text">✓</span>
-- Cheap - <s>$200-300.</s> <span class="red-text">✗</span>  <s>$500.</s> <span class="red-text">✗</span>  <s>$700.</s> <span class="red-text">✗</span>  $1000. <span class="green-text">✓</span>
-- Done in <s>a couple of weeks.</s> <span class="red-text">✗</span>  <s>3 months.</s> <span class="red-text">✗</span>  <s>Before August.</s> <span class="red-text">✗</span>  <s>Before Christmas.</s> <span class="red-text">✗</span>  Real soon now.  <span class="green-text">✓</span>
-- Stretch goal: 5 year design life 
+1. Warm-white lights only - colour would be fun but too garish  <span class="green-text">✓</span>
+1. Stretch goal: responsive enough to play a key twice in quick succession (eg mario has quavers at 180bpm ~= 150ms)  <span class="green-text">✓</span>
+1. Recycled components (from the bin at work) as much as possible  <span class="green-text">✓</span>
+1. Cheap - <s>$200-300.</s> <span class="red-text">✗</span>  <s>$500.</s> <span class="red-text">✗</span>  <s>$700.</s> <span class="red-text">✗</span>  $1000. <span class="green-text">✓</span>
+1. Done in <s>a couple of weeks.</s><span class="red-text">✗</span>  <s>3 months.</s><span class="red-text">✗</span>  <s>Before August.</s><span class="red-text">✗</span>  <s>Before Christmas.</s><span class="red-text">✗</span> Real soon now<span class="green-text">✓</span>
+1. Stretch goal: 5 year design life 
 
 
 
