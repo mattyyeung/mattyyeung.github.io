@@ -143,8 +143,7 @@ The settings webapp can toggle the preset soundfont and scale. There's also a `p
 It's surprisingly hard to find tracks that sound good cut up into 23 little tiny pieces. There are a few choices for how to cut: 
 | each sample is one (or two) beats long | player walks at constant rate | Imperial March |
 | each sample is one note of the melody | player walks to rhythm of melody | mario |
-| one key starts a "backing track" & other keys 
-are samples that get played on top | player walks to rhythm of melody | Harder Better Faster Stronger |
+| one key starts a "backing track" & other keys <br> are samples that get played on top | player walks to rhythm of melody | Harder Better Faster Stronger |
 
 To cut up a music track into 23 samples I used wavesurfer.js to make a simple gui `audio.html`:
 
