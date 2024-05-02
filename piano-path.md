@@ -98,7 +98,7 @@ Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd 
 
 ---
 
-# Technical Details
+## Technical Details
 
 ### Architecture:
 ![PianoPath Architecture](/assets/piano-path/architecture.png)
@@ -144,9 +144,9 @@ There's also a `pachelbel's canon mode` which isn't a scale at all, but plays th
 **Song mode:**
 It's surprisingly hard to find tracks that sound good cut up into 23 little tiny pieces. There are a few choices for how to cut: 
 
-| each sample is one (or two) beats long | player walks at constant rate | Imperial March |
-| each sample is one note of the melody | player walks to rhythm of melody | mario |
-| one key starts a "backing track" & other keys <br> are samples that get played on top | player walks to rhythm of melody | Harder Better Faster Stronger |
+- each sample is one (or two) beats long, so the player walks at constant rate - eg Imperial March
+- each sample is one note of the melody, so the player walks to rhythm of melody - eg mario
+- one key starts a "backing track" & other keys are samples that get played on top - player walks to rhythm of melody - eg Harder Better Faster Stronger
 
 To cut up a music track into 23 samples I used [wavesurfer.js](https://wavesurfer.xyz/) to make a simple gui `audio.html`:
 
@@ -184,7 +184,7 @@ Goal: can play a key twice in succession, eg fast enough to play the mario theme
 
 ### Picking a Sensor
 
-I probably went though 10 different options before settling on load cells designed for bathroom scales for the pavers and IR tripwires for the steps. 
+I probably went though 10 different options before settling on load cells for pavers and IR tripwires for the steps. 
 []()
 
 Requirements:
