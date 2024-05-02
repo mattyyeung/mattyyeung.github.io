@@ -7,7 +7,7 @@ title: "GreenForecast: Details for Energy People"
 
 ---
 
-### Greenness Details:
+### Details about Calculating "Greenness":
 
 For simplicity, the analysis assumes fuel sources are either 'Green' or 'Not Green'. Wind, solar and hydro are 'Green' while coal, diesel and gas (in various forms) are not. Reality is not so simple but these complexities don't currently substantially affect the overall result.
 
@@ -17,15 +17,16 @@ Batteries and pumped storage will be more important in coming years but are curr
 
 It's Complicated, but yes.
 
-Currently, the vast majority of electricity that is generated is "used" in less than a second. This will remain true until we have (HEAPS) more battery and pumped storage. It makes intuitive sense that the Greenness of your electricity is calculated from whatever power plants are generating right now.
+Currently, the vast majority of electricity that is generated is "used" in less than a second. This will remain true until we have (HEAPS) more battery and pumped storage. Based on this alone, it makes intuitive sense that the Greenness of your electricity is calculated from whatever power plants are generating right now. 
 
-But if someone moves their consumption from a 'dirty' time to a 'clean' time, does that _cause_ the total production of green energy to increase? In the short term, generally not\*: more people share the same amount of green energy. But in the long term, moving our consumption to times of high Greenness _does_ enable more green power plants to be built: money that would otherwise be needed for expensive batteries (or rapid-response gas turbines) is spent on cheap wind and solar. Indeed, there are already areas where it is less profitable to add wind/solar because of excess capacity.
+But let's go a little deeper: if someone moves their consumption from a 'dirty' time to a 'clean' time, does that _cause_ the total production of green energy to increase? In the short term, generally not[\*]: more people share the same amount of green energy. But in the long term, moving our consumption to times of high Greenness _does_ enable more green power plants to be built: money that would otherwise be needed for expensive batteries (or rapid-response gas turbines) is spent on cheap wind and solar. Indeed, there are already areas where it is less profitable to add wind/solar because of excess capacity.
 
 Put another way, if everybody magically decided to schedule their big loads (eg heating/cooling, EV charging) during times of high Greenness, our transition to 100% renewables would be faster and our electricity bills cheaper.
 
-\*To explain "generally not" above: *Wind, solar and hydro typically generate regardless of demand; if usage increases or decreases, they rarely change output, because their fuel is free. (Hydro does respond to demand changes in the short-term, but ultimately the total amount of water available is non-negotiable). This leaves only gas that responds to changes in demand, which means moving consumption from one time to another simply changes _when_ some gas turbine runs, not how much.*
+[\*]To explain "generally not" above: *Wind, solar and hydro typically generate regardless of demand; if usage increases or decreases, they rarely change output, because their fuel is free. (Hydro does respond to demand changes in the short-term, but ultimately the total amount of water available is non-negotiable). This leaves only gas/coal that responds to changes in demand, which means moving consumption from one time to another simply changes _when_ some gas turbine runs, not how much.*
 
-*Now, there is an exception to this: when there is very high Greenness, excess supply (high wind and sun) the price goes negative. Here, solar and wind plants will reduce their output to avoid excess supply causing problems in the grid. Moving consumption to these times would indeed enable higher renewable generation. Currently, this happens only on occasional days in SA during spring/summer, but will increase in prevalence in coming years.*
+*But there is a growing exception to this: when there is very high Greenness, excess supply (high wind and sun) the price goes negative. Here, solar and wind plants will reduce their output to avoid excess supply causing problems in the grid ('curtailment'). Moving consumption to these times enables higher renewable generation immediately, without even needing to consider the long-term impacts noted above. Currently, this happens only on occasional days in SA during spring/summer, but will increase in prevalence in coming years.*
+
 
 
 ### What about WA? NT?
@@ -38,7 +39,7 @@ Yes! However, it will take quite a bit of effort. Each different market (there a
 
 ### How are Interconnectors treated - and why isn't Tasmania always 100% Greenness?
 
-Interconnectors?The big transmission lines that link states together affect Greenness and price. Electricity imported from another state is assumed to have the same Greenness as the state it's coming from - it's split into "imported green energy" and "imported fossil energy". This is why Tasmania, with no significant fossil plants, isn't always at 100% Greenness - imported electricity from Victoria has lower Greenness. Similarly, Victoria is more Green when it is importing from Tasmania.
+Interconnectors <!--?The big transmission lines that link states together-->affect Greenness and price. Electricity imported from another state is assumed to have the same Greenness as the state it's coming from - it's split into "imported green energy" and "imported fossil energy". This is why Tasmania, with no significant fossil plants, isn't always at 100% Greenness - imported electricity from Victoria has lower Greenness. Similarly, Victoria is more Green when it is importing from Tasmania.
 
 ### What is "Wholesale Price"?
 

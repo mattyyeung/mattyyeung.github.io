@@ -20,6 +20,8 @@ layout: default
 
 <!-- - ### [MicroGEM Sal6830™](/sal6830) -->
 
+### Older:
+
 - ### [Industrial Robot Controlled with Hand Gestures](/industrial-robot-kinect)
 
 - ### [The Clap Toaster](/clap-toaster)

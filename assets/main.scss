@@ -40,11 +40,12 @@ hr {
 }
 
 
-/* grey box */
+/* grey inset box */
 .grey-box {
     border-radius: 8px;
     background-color: #eee;
     border: 1px solid #ccc;
     padding: 10px 15px;
     font-size: 0.9em;
+    font-style: italic;
 }
