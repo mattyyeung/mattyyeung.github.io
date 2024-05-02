@@ -65,34 +65,36 @@ For technical details, see below...
 - *How long?* Around 9 months worth of "hobby time". Perhaps a quarter of it experimenting with different technologies, one quarter iterating the chosen design, one quarter building/waterproofing steps and one quarter integration and fixing issues. The biggest surprise to me was "outdoor-proofing" - making 23x2 pieces of electronics robust to complete submersion, UV and 50C temperature swings - took a LONG time. 
 - *How much?* Original goal: $250, relying mostly on recycled components. Blew RIGHT through that... probably $1000. But would have been a lot more (3-5x?)if I bought everything new
  -->
-- *How did you learn to do all this?* 
+- *How did you learn to do all this?* <br>
 I'm an engineer. Which is to say, I googled a bunch and asked for a bunch of advice 
-- *Do you leave it on all the time?* 
+- *Do you leave it on all the time?* <br>
 It's often on 'silent mode' between 8.30am and 8.30pm, unless it's down for "maintenance"
-- *Does it use much power?* 
+- *Does it use much power?* <br>
 under 10W in idle, around 1/20th of my fridge
-- *Can it play my fav song XYZ?* 
+- *Can it play my fav song XYZ?* <br>
 Surprisingly few songs sound ok cut up into 23 little chunks, but sure anything is possible 
-- *Why not use multi-colour LEDs?* 
+- *Why not use multi-colour LEDs?* <br>
 Would look too garish for us. Gotta draw the line somewhere. Would certainly be possible though. 
-- *Could you have used a camera and AI for this?* 
+- *Could you have used a camera and AI for this?* <br>
 In short, no... the quality would suck. I briefly considered cameras, multi-cameras, depth-sensors, lidar... but (besides the cost) none of those would give the feeling of activating a key with your foot. Would have been fun to try though. 
-- *You could sell this!* 
+- *You could sell this!* <br>
 Yeah nah, it's just for fun. 
-- *No really, I would really really really like to buy one* 
+- *No really, I would really really really like to buy one* <br>
 Sorry. I would consider it if you're willing to make a large donation to [thelifeyoucansave.org](thelifeyoucansave.org), pay the costs and you're very patient. 
-- *I live nearby, can I take video?* 
+- *I live nearby, can I take video?* <br>
 Sure, if you don't post on social media... it's our home. 
-- *Can I copy?* 
+- *Can I copy?* <br>
 Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd love to see it (and post it here if you like!). Link to this page for attribution. 
+
+---
 
 ## Technical Details
 
 ### Architecture:
-![]()
+![PianoPath Architecture](/assets/piano-path/architecture.png)
 
 ### Exploded view of one paver:
-![]()
+![PianoPath Architecture](/assets/piano-path/paver-exploded.png)
 
 ### Design Goals:
 - Steps that light up!
