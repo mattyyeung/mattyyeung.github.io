@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Healthcare needs trustworthy LLMs: Introducing Deterministic Quoting"
+title: "Hallucination-Free RAG: How we bring trust to Healthcare AI"
 ---
 
-LLMs have the potential to revolutionise healthcare, but the fear and reality of hallucinations prevent adoption in most applications. 
+<!-- "Healthcare needs trustworthy LLMs: Introducing Deterministic Quoting" -->
+LLMs have the potential to revolutionise our field of healthcare, but the fear and reality of hallucinations prevent adoption in most applications. 
 
 At [Invetech](https://www.invetechgroup.com/), we’re working on “Deterministic Quoting”, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
