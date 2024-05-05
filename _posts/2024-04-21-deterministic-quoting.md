@@ -33,9 +33,9 @@ Many LLM systems can be designed to deterministically quote. This article provid
 
 ![](/assets/deterministic-quoting/hallucination.png)
 
-LLM hallucinations are endemic.
+Hallucinations are endemic to LLM systems.
 
-* The biggest models from OpenAI, Google, Anthropic etc. hallucinate more than 20% of the time in many use-cases <!--TODO-->
+* The biggest models from OpenAI, Google, Anthropic etc. hallucinate more than 20% of the time in some use-cases <!--TODO-->
 * It’s safe to assume that the next generation (ChatGPT “5”, Gemini 1.5 Ultra, etc.) will continue to hallucinate, albeit at a lower rate
 * Some LLMs are trained/prompted to cite sources… but these citations themselves can be hallucinated! This can be particularly problematic: users are more likely to trust authoritative-looking citations
 <!-- * At least [one system](https://gemini.google.com/) offers a function to verify claims by querying a search engine, but this still requires vigilance from the user -->
@@ -46,7 +46,7 @@ In short: any information that passes through an LLM is potentially “tainted�
 
 ### So what?
 
-Naturally conservative fields like healthcare do not deploy systems that are reliable “most of the time”. In most healthcare applications, even a low rate of hallucination is enough to prevent adoption at scale. We can't burden users with the task of independent verification – mistakes are inevitable. 
+In naturally conservative fields like healthcare we do not deploy systems that are reliable “most of the time”. Even a low rate of hallucination is enough to prevent adoption at scale for most of our use-cases. We simply can't burden users with the task of independent verification – mistakes and their consequences are inevitable.
 
 <!--TODO-->
 
