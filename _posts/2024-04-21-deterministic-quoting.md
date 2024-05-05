@@ -267,6 +267,7 @@ Deterministic Quoting helps to bridge the LLM "trust gap". Combining the flexibi
 Advanced versions of the technique are still under development, but even basic implementations show significant improvement over the current state-of-the-art. Future versions can provide further improvements to quality of answers and flexibility when parsing a wide range of input documentation. 
 
 For some applications, a basic DQ implementation may be the difference between a proof-of-concept and a system with enough trustworthiness to deploy into production. For others, there is still work to be done before we can demonstrate sufficient safety. In all cases, it is clear that some variation of DQ will remain useful as long as models continue to hallucinate. 
+
 --- 
 
 <div class="grey-box">
