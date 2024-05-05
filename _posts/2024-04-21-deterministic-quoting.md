@@ -3,9 +3,7 @@ layout: post
 title: "Healthcare needs trustworthy LLMs: Deterministic Quoting can help"
 ---
 
-<!-- todo: damian's 2 fedbacks -->
-
-[LLM](https://en.wikipedia.org/wiki/Large_language_model)s have the potential to revolutionise healthcare, but the fear and reality of hallucinations prevent adoption in most applications. 
+LLMs have the potential to revolutionise healthcare, but the fear and reality of hallucinations prevent adoption in most applications. 
 
 At [Invetech](https://www.invetechgroup.com/), we’re working on “Deterministic Quoting”, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
@@ -273,7 +271,7 @@ For some applications, a basic DQ implementation may be the difference between a
 
 <div class="grey-box">
 Contributors: Chris Herring, Lars Katzfey & I. We work at <a href="https://www.invetechgroup.com/">Invetech</a><br>
-Contact: <a href="https://www.linkedin.com/in/matt-yeung-86185039/">LinkedIn</a> or mail matthew dot yeung at invetechgroup.com
+Contact: <a href="https://www.linkedin.com/in/matt-yeung-86185039/">LinkedIn</a> or mail matthew dot yeung at invetech.com.au
 </div>
 
 
