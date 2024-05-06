@@ -10,7 +10,7 @@ layout: default
 ---
 
 
-- ### [Hallucination-Free RAG: How we bring trust to Healthcare AI](/deterministic-quoting-rag)
+- ### [Hallucination-Free RAG: Making LLMs Safe for Healthcare](/deterministic-quoting-rag)
 
 - ### [Introducing GreenForecast.au](/greenforecast) <br>*7-Day Outlook of Renewables & Power Price in the National Electricity Market*
 
