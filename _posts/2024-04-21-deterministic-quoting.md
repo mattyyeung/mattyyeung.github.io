@@ -9,9 +9,7 @@ LLMs have the potential to revolutionise our field of healthcare, but the fear a
 
 At [Invetech](https://www.invetechgroup.com/), we’re working on **“Deterministic Quoting”**, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
-<center>
 ![](/assets/deterministic-quoting/1_bigger.png)
-</center>
 
 In this example, everything displayed with a blue background is **guaranteed to be _verbatim_ from source material. No hallucinations.** LLMs remain imperfect, so it may still choose to quote the _wrong part_ of the source material, but only “real” quotations are displayed on blue - they are deterministically generated.
 
