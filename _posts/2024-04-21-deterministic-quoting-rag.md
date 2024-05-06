@@ -1,16 +1,19 @@
 ---
 layout: post
-title: "Hallucination-Free RAG: How we bring trust to Healthcare AI"
+title: "Hallucination-Free RAG: Making LLMs Safe for Healthcare"
 ---
 
 <!-- "Healthcare needs trustworthy LLMs: Introducing Deterministic Quoting" -->
+<!-- Hallucination-Free RAG: How we bring trust to Healthcare AI -->
 LLMs have the potential to revolutionise our field of healthcare, but the fear and reality of hallucinations prevent adoption in most applications. 
 
-At [Invetech](https://www.invetechgroup.com/), we’re working on “Deterministic Quoting”, a new technique that ensures quotations from source material are verbatim, not hallucinated.
+At [Invetech](https://www.invetechgroup.com/), we’re working on **“Deterministic Quoting”**, a new technique that ensures quotations from source material are verbatim, not hallucinated.
 
-![](/assets/deterministic-quoting/1.png)
+<center>
+![](/assets/deterministic-quoting/1_bigger.png)
+</center>
 
-In this example, everything displayed with a blue background is guaranteed to be _verbatim_ from source material. No hallucinations. LLMs remain imperfect, so it may still choose to quote the _wrong part_ of the source material, but only “real” quotations are displayed on blue - they are deterministically generated.
+In this example, everything displayed with a blue background is **guaranteed to be _verbatim_ from source material. No hallucinations.** LLMs remain imperfect, so it may still choose to quote the _wrong part_ of the source material, but only “real” quotations are displayed on blue - they are deterministically generated.
 
 We think Deterministic Quoting is an “enabler” for deploying LLMs where there are serious consequences to incorrect information, such as:
 - AIs that process medical records
