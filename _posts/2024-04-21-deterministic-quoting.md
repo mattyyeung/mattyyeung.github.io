@@ -273,8 +273,11 @@ For some applications, a basic DQ implementation may be the difference between a
 --- 
 
 <div class="grey-box">
-Contributors: Chris Herring, Lars Katzfey & I. We work at <a href="https://www.invetechgroup.com/">Invetech</a><br>
-Contact: matthew.yeung<span style="display:none">ZZZZZ</span>@invetech.com.au or <a href="https://www.linkedin.com/in/mattyyeung">LinkedIn</a>
+<p>This article was <a href="https://news.ycombinator.com/item?id=40263819">discussed on Hacker News</a> and linked to by the excellent <a href="https://simonwillison.net/2024/May/7/">Simon Willison’s Weblog</a></p> 
+
+<p><b>Contributors:</b> Chris Herring, Lars Katzfey & I. We work at <a href="https://www.invetechgroup.com/">Invetech</a></p>
+
+<p><b>Contact:</b> matthew.yeung<span style="display:none">ZZZZZ</span>@invetech.com.au or <a href="https://www.linkedin.com/in/mattyyeung">LinkedIn</a></p>
 </div>
 
 
