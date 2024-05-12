@@ -229,7 +229,7 @@ While the implementation above is a useful explainer there are many opportunitie
 #### Reducing the rate of irrelevant answers and omissions
 - Detect & reject answers that fail to use deterministic quoting
 - Detect if the answer fails to answer the question (imperfect, because an LLM is used to do this)
-- Replace the "unique reference string matching" with a more sophisticated method of matching a selected quote to the ground-truth database. 
+- Replace the "unique reference string matching" with a more sophisticated method of matching a selected quote to the ground-truth database. For example: matching on substring similarity or using Extractive QA
 - Prompt engineering to encourage "I don't know" responses
 
 #### Presenting information the LLMs in a more machine-understandable manner
