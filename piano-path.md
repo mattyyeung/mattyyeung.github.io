@@ -41,7 +41,7 @@ It took about 9 months worth of "hobby time" all-up, roughly equal parts:
 - integration (aka fixing mistakes)
 - landscaping
 
-My original budget was $250... because "*really, who can justify spending money on front path lights*". Blew RIGHT through that... into 4-figures. But would have been a lot more if I bought everything new!
+My original budget was $250... because "*really, who can justify spending money on front path lights*". Blew RIGHT through that, of course... into 4-figures. But would have been a lot more if I bought everything new!
 
 <!-- 
 
@@ -54,7 +54,7 @@ The idea came from an earlier project with an XBox kinect that eventually result
 
 ### How it works
 
-Imagine a set of (waterproof) bathroom scales underneath each paver. Glue on outdoor LED strips. For the 5 steps up to the patio, add an IR tripwire sensor and downlights to match. Add some electronics for brains & power distribution and write some software to run it all. Then, "just add waterproofing". But actually, quadruple the amount of waterproofing you're imagining. Then double that. That's about it! Easy!
+Imagine a set of (waterproof) bathroom scales underneath each paver. Glue on outdoor LED strips. For the 6 steps up to the patio, add an IR tripwire sensor and downlights to match. Add some electronics for brains & power distribution and write some software to run it all. Then, "just add waterproofing". But actually, quadruple the amount of waterproofing you're imagining. Then double that. That's about it! Easy!
 
 For technical details, see below...
 
@@ -65,7 +65,7 @@ For technical details, see below...
 - *How long?* Around 9 months worth of "hobby time". Perhaps a quarter of it experimenting with different technologies, one quarter iterating the chosen design, one quarter building/waterproofing steps and one quarter integration and fixing issues. The biggest surprise to me was "outdoor-proofing" - making 23x2 pieces of electronics robust to complete submersion, UV and 50C temperature swings - took a LONG time. 
 - *How much?* Original goal: $250, relying mostly on recycled components. Blew RIGHT through that... probably $1000. But would have been a lot more (3-5x?)if I bought everything new
  -->
-**How did you learn to do all this?**<br>
+**You did it all from scratch? How?**<br>
 I'm an engineer. Which is to say, I googled a bunch and asked a bunch of advice 
 
 **Do you leave it on all the time?**<br>
@@ -78,9 +78,9 @@ Under 10W in idle, around 1/20th of my fridge
 Surprisingly few songs sound ok cut up into 23 little chunks, but sure anything is possible 
 
 **Why not use multi-colour LEDs?**<br>
-Would look too garish for us. Gotta draw the line somewhere. Would certainly be possible though. 
+It would look too garish for us - gotta draw the line somewhere :). Certainly possible though. 
 
-**Could you have used a camera and AI for this?**<br>
+**Could you have "just" used a camera and AI?**<br>
 In short, no... the quality would suck. I briefly considered cameras, multi-cameras, depth-sensors, lidar... but (besides the cost) none of those would give the feeling of activating a key with your foot. Would have been fun to try though. 
 
 **You could sell this!**<br>
@@ -93,8 +93,7 @@ Sorry. I would consider it if you're willing to make a large donation to [thelif
 Sure, if you *don't post on social media at all*... this is our home!
 
 **Can I copy?**<br>
-Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd love to see it (and post it here if you like!). Link to this page for attribution. 
-
+Hell yeah! All the design files are on github, CC-NC-BY license. Send me a photo I'd love to see it (and post it here if you like!). Link to this page for attribution. 
 
 ---
 
@@ -131,26 +130,63 @@ Sure! All the design files are on github, CC-NC-BY license. Send me a photo I'd 
 
 
 
+### Picking a Sensor
+
+I probably went though 10 different options before settling on load cells for pavers and IR tripwires for the steps. 
+[]()
+
+Requirements:
+- detect foot-step - including kids. Bonus: cat.
+- detect foot-lift - allows player to change note lengths. A late addition, realised during experiments. 
+- multiple people playing multiple steps at once - don't force people to go one at a time
+- latency <100ms 
+- nothing sticking up over pavers - will get kicked & destoyed
+- lots of leaves fall in autumn. Should be robust to this
+- cheap - <$5 per step? Total 23 steps to detect
+- no false-triggers - don't want lights randomly turning on 
+- no double-triggers - don't want flicker on or weird double-notes
+- IP68 rating - will be completely submerged for hours. Silt buildup over months/years
+- Temperature 0°C-60°C - some pavers get direct sun on 40°C days
+- works under direct sun and at night - this killed several IR reflective and lidar options
+- for 6 steps up to porch: can install without pulling up the tiles
+- Bonus: minimise support electronics, cabling, etc.
+
+I tried/considered: accelerometer under paver, microphone under paver, lidar depth sensor, fancy lidar, camera, multi-camera, depth camera, IR reflective, IR tripwire, ultrasonic distance sensor. 
+
+Load cells ticked all the boxes for pavers at the expense of being fiddly to wire up 4 cells + 1 pcb for each. The result was great quality and responsive enough. 
+
+The 6 steps up to the porch were different by necessity - the steps are tiled and I didn't want to pull them up, so nothing could go under. None of the sensors were reliably working - direct sun was a killer - so I was forced to use IR tripwire. It's nice and cheap but I had to wire in something on the far side of the step, which required building in a whole new siding to the steps.
+
+[]()
+
+
 ### Music
 **Piano mode:**
-I'm using [pyfluidsynth](https://pypi.org/project/pyFluidSynth/) triggering a soundfont to generate the various keyboard patches. I dithered a bit about what scale to choose: all 12 notes? Just the major scale? Minor? Pentatonic?
+I dithered a bit about what scale to choose: all 12 notes? Just the major scale? Minor? Pentatonic?
 
 In the end, major is a good default. Pentatonic sounds nice when there are lots of people at once - picking a nice "pluck" soundfont helped - but most people expect major. Perhaps 12-tone chromatic could have worked if I was willing to paint the black keys, but that violates the "the before and after photo look the same" requirement. 
 
 The settings webapp can toggle preset combos of soundfont and scale. 
 
-There's also a `pachelbel's canon mode` which isn't a scale at all, but plays the notes from the tune in order using a strings patch. It with multiple people starting in canon. Unlike 'song mode', which has fixed-length samples for each key, it allows players to hold notes as long as they like, keeping time together.
+I'm using [pyfluidsynth](https://pypi.org/project/pyFluidSynth/) to play soundfonts, which works great. 
+
+There's also a variant of piano mode for pachelbel's canon: not a scale at all, but plays the notes from the tune in order using a strings patch. Allows multiple people to start in canon. Where `song mode` only plays one sample at a time, this allows multiples players to hold notes however long they like, keeping time together.
+
 
 **Song mode:**
-It's surprisingly hard to find tracks that sound good cut up into 23 little tiny pieces. There are a few choices for how to cut: 
+This mode plays arbitrary samples, not patches. So it can be any audio file, cut up into pieces. Although, it's *surprisingly* hard to find tracks that sound good cut up into 23 little tiny pieces. There are a few choices for how to cut: 
 
-- each sample is one (or two) beats long, so the player walks at constant rate - eg Imperial March
-- each sample is one note of the melody, so the player walks to rhythm of melody - eg mario
-- one key starts a "backing track" & other keys are samples that get played on top - player walks to rhythm of melody - eg Harder Better Faster Stronger
+1. keep each sample a constant one/two beats long, so the player walks at steady rate - eg Imperial March
+1. each sample is one note of the melody, so the player walks to rhythm of melody - eg mario
+1. one key starts a "backing track" & other keys are samples that get played on top - player walks to rhythm of melody - eg Harder Better Faster Stronger
 
-To cut up a music track into 23 samples I used [wavesurfer.js](https://wavesurfer.xyz/) to make a simple gui `audio.html`:
+To cut up tracks into samples I used [wavesurfer.js](https://wavesurfer.xyz/) to make a simple gui `audio.html`:
 
-The cut timestamps are exported to json and manually inserted into `song_catalogue.json`. The head app keeps the whole audio file in memory and just jumps to the right location when a key is pressed
+<!-- TODO -->
+
+The cut timestamps are exported to json and manually inserted into `song_catalogue.json`. 
+
+The head app keeps the whole audio file in memory and just jumps to the right location when a key is pressed. To keep latency low (especially when changing samples early), I ended up manually filling the audio buffer. [Sounddevice](https://python-sounddevice.readthedocs.io/) & [soundfile](https://python-soundfile.readthedocs.io/) made this easy. 
 
 
 ### Responsiveness
@@ -179,38 +215,11 @@ First attempt was 300-400ms. Used these optimisations, most effective first:
 - nodes check for serial comms after each sensor, not after all 6 are read
 
 **Repeat notes:**<br>
-Goal: can play a key twice in succession, eg fast enough to play the mario theme: 180bpm, the first two notes of the fanfare are repeated quavers, or ~150ms. Node states are polled at ~42Hz, or 24ms, so that's plenty. But it means I can't use eg a 5-point median filter on sensor inputs to fix an outlier/noise issue I saw - had to find a different solution. It's very satisfying to double-tap a key! 
+Goal: can play a key twice in succession, eg fast enough to play the mario theme: 180bpm, the first two notes of the fanfare are repeated quavers, or ~150ms. Node states are polled at ~42Hz, or 24ms, so that's plenty. But it means I can't use eg a 5-point median filter on sensor inputs to fix an outlier/noise issue I saw - had to find a different solution. 
 
+It's very satisfying to double-tap a key! 
 
-### Picking a Sensor
-
-I probably went though 10 different options before settling on load cells for pavers and IR tripwires for the steps. 
-[]()
-
-Requirements:
-- detect foot-step - including kids. Bonus: cat.
-- detect foot-lift - allows player to change note lengths. This was a late addition, discovered that it mattered during experimentation. 
-- multiple people playing multiple steps at once - don't force people to go one at a time
-- latency <100ms 
-- nothing sticking up over pavers - will get kicked & destoyed
-- lots of leaves fall in autumn. Should be robust to this
-- cheap - <$5 per step? Total 23 steps to detect
-- no false-triggers - don't want lights randomly turning on 
-- no double-triggers - don't want flicker on or weird double-notes
-- IP68 rating - will be completely submerged for hours. Silt buildup over months/years
-- Temperature 0°C-60°C - some pavers get direct sun on 40°C days
-- works under direct sun and at night - this killed several IR reflective and lidar options
-- for 6 steps up to porch: can install without pulling up the tiles
-- Bonus: minimise support electronics, cabling, etc.
-
-I tried/considered: accelerometer under paver, microphone under paver, lidar depth sensor, fancy lidar, camera, multi-camera, depth camera, IR reflective, IR tripwire, ultrasonic distance sensor. 
-
-Load cells ticked all the boxes for pavers at the expense of being fiddly to wire up 4 cells + 1 pcb for each. The result was great quality and responsive enough. 
-
-The 6 steps up to the porch were different by necessity - the steps are tiled and I didn't want to pull them up, so nothing could go under. None of the sensors were reliably working - direct sun was a killer - so I was forced to use IR tripwire. It's nice and cheap but I had to wire in something on the far side of the step, which required building in a whole new siding to the steps.
-
-[]()
-
+<!-- vid?? -->
 
 ### What was hard
 - Foam

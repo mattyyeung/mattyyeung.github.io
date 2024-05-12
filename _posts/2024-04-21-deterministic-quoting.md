@@ -100,7 +100,7 @@ DQ techniques provide benefit wherever hallucinations are problematic – typica
 
 Proof-of-concept demonstations already exist - organisations are clearly excited about the potential for these systems. But in most of these, there are serious consequences to hallucinations. Few are currently reliable enough to deploy at scale. 
 
-Of course, DQ may be applied outside healthcare too - eg. systems with knowledge of legisliation, financial regulation or works of literature. But here, we constrain the discussion to healtcare. 
+Of course, DQ may be applied outside healthcare too - eg. systems with knowledge of legisliation, financial regulation or works of literature. But here, we constrain the discussion to healthcare. 
 
 ---
 
@@ -279,14 +279,3 @@ For some applications, a basic DQ implementation may be the difference between a
 
 <p><b>Contact:</b> matthew.yeung<span style="display:none">ZZZZZ</span>@invetech.com.au or <a href="https://www.linkedin.com/in/mattyyeung">LinkedIn</a></p>
 </div>
-
-
-<!--TODO. Ideas:
-- Hallucinations remain an unsolved problem, but deterministic quoting may open up new application spaces for LLMs.
-- Many AI systems can be designed to “Deterministically Quote”.
-- Some variation of DQ will remain useful as long as models hallucinate - even at a low rate.
-- More sophisticated systems don’t just discard this text, it can (marginally) improve “are-we-looking-up-the-right-thing accuracy”
-
-We look forward to a time when the fantastic potential of LLMs can be safely deployed in mission-critical applications like healthcare. 
-
--->
