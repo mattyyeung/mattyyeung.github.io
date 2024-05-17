@@ -135,9 +135,8 @@ I probably went though 10 different options before settling on [load cells](http
 
 ![Sensors](/assets/piano-path/sensors.jpg)
 
-
 <table class="small-table">
-<th><td>Requirement</td><td>Notes</td></th>
+<tr><th>Requirement</th><th>Notes</th></tr>
 <tr><td>Detect foot-step</td><td>Adults & kids. Bonus: cat</td></tr>
 <tr><td>Detect foot-lift</td><td>allows player to change note lengths. A late addition, realised during experiments. </td></tr>
 <tr><td>Multiple people playing multiple steps at once</td><td>don't force people to go one at a time</td></tr>
@@ -150,6 +149,7 @@ I probably went though 10 different options before settling on [load cells](http
 <tr><td>Temperature 0°C-60°C</td><td>some pavers get direct sun on 40°C days</td></tr>
 <tr><td>Works under direct sun and at night</td><td>this killed several IR reflective and lidar options</td></tr>
 </table>
+
 I tried/considered: accelerometer under paver, microphone under paver, lidar depth sensor, fancy lidar, camera, multi-camera, depth camera, IR reflective, IR with retroreflector, IR tripwire, ultrasonic distance sensor. 
 
 **Load cells** ticked all the boxes for pavers at the expense of being fiddly to wire up 4 cells + 1 pcb for each. The result was great quality and responsive enough: 80Hz or about 6ms average latency.
@@ -158,7 +158,7 @@ The 6 steps up to the porch were different by necessity - the steps are tiled so
 
 
 ### Music
-**Piano mode:**
+**Piano mode:**<br>
 I dithered a bit about what scale to choose: all 12 notes? Just the major scale? Minor? Pentatonic?
 
 In the end, major is a good default. Pentatonic sounds nice when there are lots of people at once - picking a nice "pluck" soundfont helped - but most people expect major and 23 notes equals 3 octaves exactly. Perhaps 12-tone chromatic could have worked if I was willing to paint the black keys, but that violates the "the before and after photo look the same" requirement.
@@ -171,7 +171,7 @@ I'm using [pyfluidsynth](https://pypi.org/project/pyFluidSynth/) to play soundfo
 
 ![]()
 
-**Song mode:**
+**Song mode:**<br>
 This mode plays arbitrary samples, not patches. So it can be any audio file, cut up into pieces. Although, it's *surprisingly* hard to find tracks that sound good cut up into 23 little tiny pieces. There are a few choices for how to cut: 
 
 1. keep each sample a constant one/two beats long, so the player walks at steady rate - eg Imperial March
@@ -180,7 +180,7 @@ This mode plays arbitrary samples, not patches. So it can be any audio file, cut
 
 To cut up tracks into samples I used [wavesurfer.js](https://wavesurfer.xyz/) to make a simple gui `audio.html`:
 
-<!-- TODO -->
+![Audio cutting GUI](/assets/piano-path/audio-cutting.png)
 
 The cut timestamps are exported to json and manually inserted into `song_catalogue.json`. 
 
