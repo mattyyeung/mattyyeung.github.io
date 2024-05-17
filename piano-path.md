@@ -136,24 +136,20 @@ I probably went though 10 different options before settling on [load cells](http
 ![Sensors](/assets/piano-path/sensors.jpg)
 
 
-|Requirement | Notes |
-| --- | --- |
-| detect foot-step | Adults & kids. Bonus: cat |
-
-- detect foot-lift - allows player to change note lengths. A late addition, realised during experiments. 
-- multiple people playing multiple steps at once - don't force people to go one at a time
-- latency <100ms 
-- nothing sticking up over pavers - will get kicked & destoyed
-- lots of leaves fall in autumn. Should be robust to this
-- cheap - <$5 per step? Total 23 steps to detect
-- no false-triggers - don't want lights randomly turning on 
-- no double-triggers - don't want flicker on or weird double-notes
-- IP68 rating - will be completely submerged for hours. Silt buildup over months/years
-- Temperature 0°C-60°C - some pavers get direct sun on 40°C days
-- works under direct sun and at night - this killed several IR reflective and lidar options
-- for 6 steps up to porch: can install without pulling up the tiles
-- Bonus: minimise support electronics, cabling, etc.
-
+<table class="small-table">
+<th><td>Requirement</td><td>Notes</td></th>
+<tr><td>Detect foot-step</td><td>Adults & kids. Bonus: cat</td></tr>
+<tr><td>Detect foot-lift</td><td>allows player to change note lengths. A late addition, realised during experiments. </td></tr>
+<tr><td>Multiple people playing multiple steps at once</td><td>don't force people to go one at a time</td></tr>
+<tr><td>Low latency</td>td><td><100ms </td></tr>
+<tr><td>Nothing sticking up over pavers</td><td>will get kicked & destoyed</td></tr>
+<tr><td>Cheap</td>td><td><$5 per step? Total 23 steps to detect</td></tr>
+<tr><td>No false-triggers</td><td>don't want lights randomly turning on, eg when leaves fall in Autumn</td></tr>
+<tr><td>No double-triggers</td><td>don't want flicker on or weird double-notes</td></tr>
+<tr><td>IP68 rating</td><td>will be completely submerged for hours. Silt buildup over months/years</td></tr>
+<tr><td>Temperature 0°C-60°C</td><td>some pavers get direct sun on 40°C days</td></tr>
+<tr><td>Works under direct sun and at night</td><td>this killed several IR reflective and lidar options</td></tr>
+</table>
 I tried/considered: accelerometer under paver, microphone under paver, lidar depth sensor, fancy lidar, camera, multi-camera, depth camera, IR reflective, IR with retroreflector, IR tripwire, ultrasonic distance sensor. 
 
 **Load cells** ticked all the boxes for pavers at the expense of being fiddly to wire up 4 cells + 1 pcb for each. The result was great quality and responsive enough: 80Hz or about 6ms average latency.
