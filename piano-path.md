@@ -133,7 +133,7 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
 
 I probably went though 10 different options before settling on [load cells](https://www.aliexpress.com/item/1005006593556468.html) for pavers and "IR tripwires"  for the steps. 
 
-![Sensors](/assets/piano-path/sensors.jpg){.text-align}
+<p class="center"><img src="/assets/piano-path/sensors.jpg"></p>
 
 <table class="small-table">
 <tr><th>Requirement</th><th>Notes</th></tr>
