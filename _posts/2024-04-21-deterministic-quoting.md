@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Hallucination-Free RAG: Making LLMs Safe for Healthcare"
+title: "Deterministic Quoting: Making LLMs Safer for Healthcare"
 ---
 
+<!-- Hallucination-Free RAG: Making LLMs Safe for Healthcare -->
 <!-- "Healthcare needs trustworthy LLMs: Introducing Deterministic Quoting" -->
 <!-- Hallucination-Free RAG: How we bring trust to Healthcare AI -->
 LLMs have the potential to revolutionise our field of healthcare, but the fear and reality of hallucinations prevent adoption in most applications. 

@@ -41,7 +41,7 @@ It took about 9 months worth of "hobby time" all-up, roughly equal parts:
 - integration (aka fixing mistakes)
 - landscaping
 
-My original budget was $250... because "*really, who can justify spending money on front path lights*". Blew RIGHT through that, of course... more than 5x that. But would have been a lot more if I bought everything new!
+My original budget was $250... because "*really, who can justify spending money on front path lights*". Blew RIGHT through that, of course... more than 5x. But would have been a lot more if I bought everything new!
 
 <!-- 
 
@@ -54,7 +54,7 @@ The idea came from an earlier project with an XBox kinect that eventually result
 
 ### How it works
 
-Imagine a set of (waterproof) bathroom scales underneath each paver. Glue on outdoor LED strips. For the 6 steps up to the patio, add an "IR tripwire" sensor and downlights to match. Add some electronics for brains & power distribution and write some software to run it all. Then, "just add waterproofing". But actually, quadruple the amount of waterproofing you're imagining. Then double that. That's about it! Easy!
+Imagine a set of (waterproof) bathroom scales underneath each paver. Glue on outdoor LED strips. For the 6 steps up to the patio, add an "IR tripwire" sensor and downlights to match. Add some electronics for brains & power distribution and write some software to run it all. Then, "just add waterproofing". But actually, quadruple the amount of waterproofing you're imagining. That's about it! Easy!
 
 For technical details, see below...
 
@@ -108,7 +108,7 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
 ### Design Goals:
 1. Steps that light up!
     - 17x pavers + 6x steps up to the front door  <span class="green-text">✓</span>
-    - Young kids and adults detectable. Stretch goal: 4kg cat  <span class="green-text">✓</span>
+    - Young kids and adults detectable. <span class="green-text">✓</span> Stretch goal: 4kg cat  <span class="green-text">(✓)</span>
     - Lights visible during day (direct sun) and night  <span class="green-text">✓</span>
     - Can turn all lights on - to allow people to see at night  <span class="green-text">✓</span>
 1. Sounds 
@@ -121,10 +121,9 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
 1. The "before" and "after" photo look the same   <span class="green-text">✓</span>
     - no big boxes or lights bulging  <span class="green-text">(✓)</span>
     - Keep original pavers  <span class="green-text">✓</span>
-1. Warm-white lights only - colour would be fun but too garish  <span class="green-text">✓</span>
 1. Stretch goal: responsive enough to play a key twice in quick succession (eg mario has quavers at 180bpm ~= 150ms)  <span class="green-text">✓</span>
 1. Recycled components (from the bin at work) as much as possible  <span class="green-text">✓</span>
-1. Cheap: <s>$200-300</s> <span class="red-text">✗</span>  <s>$500</s> <span class="red-text">✗</span>  <s>$700</s> <span class="red-text">✗</span>  $1000 <span class="green-text">✓</span>
+1. Cheap: <s>$200-300</s> <span class="red-text">✗</span>  <s>$500</s> <span class="red-text">✗</span>  <s>$700</s> <span class="red-text">✗</span>  $1000 <span class="red-text">✗</span> 
 1. Done in <s>a couple of weeks.</s><span class="red-text">✗</span>  <s>3 months.</s><span class="red-text">✗</span>  <s>Before August.</s><span class="red-text">✗</span>  <s>Before Christmas.</s><span class="red-text">✗</span> Real soon now<span class="green-text">✓</span>
 1. Stretch goal: 5 year design life 
 
@@ -133,10 +132,13 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
 ### Picking a Sensor
 
 I probably went though 10 different options before settling on [load cells](https://www.aliexpress.com/item/1005006593556468.html) for pavers and IR tripwires for the steps. 
+
 ![Sensors](/assets/piano-path/sensors.jpg)
 
-Requirements:
-- detect foot-step - including kids. Bonus: cat.
+|Requirement | Notes |
+| --- | --- |
+| detect foot-step | Adults & kids. Bonus: cat |
+
 - detect foot-lift - allows player to change note lengths. A late addition, realised during experiments. 
 - multiple people playing multiple steps at once - don't force people to go one at a time
 - latency <100ms 

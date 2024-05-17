@@ -10,7 +10,7 @@ layout: default
 ---
 
 
-- ### [Hallucination-Free RAG: Making LLMs Safe for Healthcare](/deterministic-quoting-rag)
+- ### [Deterministic Quoting: Making LLMs Safer for Healthcare](/deterministic-quoting)
 
 - ### [Introducing GreenForecast.au](/greenforecast) <br>*7-Day Outlook of Renewables & Power Price in the National Electricity Market*
 
