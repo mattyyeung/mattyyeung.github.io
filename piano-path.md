@@ -131,12 +131,11 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
 
 ### Picking a Sensor
 
-I probably went though 10 different options before settling on [load cells](https://www.aliexpress.com/item/1005006593556468.html) for pavers and IR tripwires for the steps. 
+I probably went though 10 different options before settling on [load cells](https://www.aliexpress.com/item/1005006593556468.html) for pavers and "IR tripwires"  for the steps. 
 
 ![Sensors](/assets/piano-path/sensors.jpg)
 
 
-{ .small-table }
 |Requirement | Notes |
 | --- | --- |
 | detect foot-step | Adults & kids. Bonus: cat |
@@ -155,11 +154,11 @@ I probably went though 10 different options before settling on [load cells](http
 - for 6 steps up to porch: can install without pulling up the tiles
 - Bonus: minimise support electronics, cabling, etc.
 
-I tried/considered: accelerometer under paver, microphone under paver, lidar depth sensor, fancy lidar, camera, multi-camera, depth camera, IR reflective, IR tripwire, ultrasonic distance sensor. 
+I tried/considered: accelerometer under paver, microphone under paver, lidar depth sensor, fancy lidar, camera, multi-camera, depth camera, IR reflective, IR with retroreflector, IR tripwire, ultrasonic distance sensor. 
 
-Load cells ticked all the boxes for pavers at the expense of being fiddly to wire up 4 cells + 1 pcb for each. The result was great quality and responsive enough: 80Hz or about 6ms average latency.
+**Load cells** ticked all the boxes for pavers at the expense of being fiddly to wire up 4 cells + 1 pcb for each. The result was great quality and responsive enough: 80Hz or about 6ms average latency.
 
-The 6 steps up to the porch were different by necessity - the steps are tiled so nothing could go under. Direct sunlight is the achilles heel of many of these sensors (I learned), so I was forced to use IR tripwire. The signal is modulated at 40kHz (like a TV remote) and the sensor rejects other frequencies, which is what gives it enough dynamic range to work in sunlight. It's nice and cheap but I had to wire in something on the far side of the step, which required building in a whole new siding to the steps.
+The 6 steps up to the porch were different by necessity - the steps are tiled so nothing could go under. Direct sunlight is the achilles heel of many of these sensors (I learned), so I was forced to use an **IR tripwire**. The signal is modulated at 40kHz (like a TV remote) and the sensor rejects other frequencies, which is what gives it enough dynamic range to work in sunlight. It's nice and cheap but I had to wire in something on the far side of the step, which required building in a whole new siding to the steps.
 
 
 ### Music
