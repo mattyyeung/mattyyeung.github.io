@@ -135,6 +135,8 @@ I probably went though 10 different options before settling on [load cells](http
 
 ![Sensors](/assets/piano-path/sensors.jpg)
 
+
+{ .small-table }
 |Requirement | Notes |
 | --- | --- |
 | detect foot-step | Adults & kids. Bonus: cat |
