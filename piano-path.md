@@ -100,10 +100,10 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
 ## Technical Details
 
 ### Architecture:
-![Piano Path Architecture](/assets/piano-path/architecture.png)
+<p class="center"><img src="/assets/piano-path/architecture.png" alt="Piano Path Architecture"></p>
 
 ### Exploded view of one paver:
-![Exploded view of one paver](/assets/piano-path/paver-exploded.png)
+<p class="center"><img src="/assets/piano-path/paver-exploded.png" alt="Exploded view of one paver"></p>
 
 ### Design Goals:
 1. Steps that light up!
@@ -152,7 +152,7 @@ I probably went though 10 different options before settling on [load cells](http
 
 I tried/considered: accelerometer under paver, microphone under paver, lidar depth sensor, fancy lidar, camera, multi-camera, depth camera, IR reflective, IR with retroreflector, IR tripwire, ultrasonic distance sensor. 
 
-**Load cells** ticked all the boxes for pavers at the expense of being fiddly to wire up 4 cells + 1 pcb for each. The result was great quality and responsive enough: 80Hz or about 6ms average latency.
+**Load cells** ticked all the boxes for pavers at the expense of being fiddly to wire up & waterproof 4 cells + 1 pcb for each paver. These are exactly the same load cells that are used in electronic bathroom scales, so they're cheap. The result was great quality and responsive enough: 80Hz or about 6ms average latency.
 
 The 6 steps up to the porch were different by necessity - the steps are tiled so nothing could go under. Direct sunlight is the achilles heel of many of these sensors (I learned), so I was forced to use an **IR tripwire**. The signal is modulated at 40kHz (like a TV remote) and the sensor rejects other frequencies, which is what gives it enough dynamic range to work in sunlight. It's nice and cheap but I had to wire in something on the far side of the step, which required building in a whole new siding to the steps.
 
