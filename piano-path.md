@@ -14,7 +14,6 @@ layout: page
 I turned my front path into a light-up keyboard:
 ![]()
 
-Piano mode:
 ![]()
 
 It looks pretty cool at night:
@@ -54,9 +53,7 @@ The idea came from an earlier project with an XBox kinect that eventually result
 
 ### How it works
 
-Imagine a set of (waterproof) bathroom scales underneath each paver. Glue on outdoor LED strips. For the 6 steps up to the patio, add an "IR tripwire" sensor and downlights to match. Add some electronics for brains & power distribution and write some software to run it all. Then, "just add waterproofing". But actually, quadruple the amount of waterproofing you're imagining. That's about it! Easy!
 
-For technical details, see below...
 
 
 ## Q&A
@@ -65,11 +62,15 @@ For technical details, see below...
 - *How long?* Around 9 months worth of "hobby time". Perhaps a quarter of it experimenting with different technologies, one quarter iterating the chosen design, one quarter building/waterproofing steps and one quarter integration and fixing issues. The biggest surprise to me was "outdoor-proofing" - making 23x2 pieces of electronics robust to complete submersion, UV and 50C temperature swings - took a LONG time. 
 - *How much?* Original goal: $250, relying mostly on recycled components. Blew RIGHT through that... probably $1000. But would have been a lot more (3-5x?)if I bought everything new
  -->
+
+**How does it work?**<br>
+Imagine a set of (waterproof) bathroom scales underneath each paver. Glue on outdoor LED strips. Add some electronic brains, run power cables and write some software to run it all. Then, "just add waterproofing". (But actually, *quadruple* the amount of waterproofing you're imagining). That's about it! Easy! (For more technical details, see below...)
+
 **You did this from scratch? How?**<br>
 I'm an engineer. Which is to say, I googled a bunch and asked a bunch of advice 
 
 **Do you leave it on all the time?**<br>
-It's often on 'silent mode' between 8.30am and 8.30pm, unless it's down for "maintenance"
+Yeah, but not with the sound on, got to think of the neighbours!
 
 **Does it use much power?**<br>
 Under 10W in idle, around 1/20th of my fridge
@@ -80,7 +81,7 @@ Surprisingly few songs sound ok cut up into 23 little chunks, but sure anything 
 **Why not use multi-colour LEDs?**<br>
 It would look too garish for us - gotta draw the line somewhere :). Certainly possible though. 
 
-**Could you have "just" used a camera and AI?**<br>
+**Could you have "just" used a camera and "AI"?**<br>
 In short, no... the quality would suck. I briefly considered cameras, multi-cameras, depth-sensors, lidar... but (besides the cost) none of those would give the feeling of activating a key with your foot. Would have been fun to try though. 
 
 **You could sell this!**<br>
@@ -105,6 +106,14 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
 ### Exploded view of one paver:
 <p class="center"><img src="/assets/piano-path/paver-exploded.png" alt="Exploded view of one paver"></p>
 
+### Node:
+<p class="center"><img src="/assets/piano-path/node.jpg" alt="Node box"></p>
+
+### Head:
+
+### Web control panel:
+
+
 ### Design Goals:
 1. **Steps that light up!**
     - 17x pavers + 6x steps up to the front door  <span class="green-text">✓</span>
@@ -112,19 +121,21 @@ Hell yeah! All the design files are on [github](TODO)<!--TODO-->, CC-NC-BY licen
     - Lights visible during day (direct sun) and night  <span class="green-text">✓</span>
     - Can turn all lights on - to allow people to see at night  <span class="green-text">✓</span>
 1. Sounds 
-    - Piano mode  <span class="green-text">✓</span>
-    - Scales: major/minor/pentatonic  <span class="green-text">✓</span>
-    - Synth patches (.sf2)  <span class="green-text">✓</span>
-    - "song mode" that plays a track as you walk down the path  <span class="green-text">✓</span>
+    - Piano mode: play notes with your feet! <span class="green-text">✓</span>
+        - Scales: major/minor/pentatonic  <span class="green-text">✓</span>
+        - Synth patches (.sf2)  <span class="green-text">✓</span>
+    - "song mode": play a track as you walk down the path  <span class="green-text">✓</span>
     - Low latency from keypress to hearing sound - <100ms  <span class="green-text">✓</span>  stretch: 30ms <span class="red-text">✗</span>
-1. Can be safely left on all the time  <span class="green-text">✓</span>
-1. The "before" and "after" photo look the same   <span class="green-text">✓</span>
+1. The "before" and "after" photo look the same  <span class="green-text">✓</span>
     - no big boxes or lights bulging  <span class="green-text">(✓)</span>
     - Keep original pavers  <span class="green-text">✓</span>
 1. Stretch goal: responsive enough to play a key twice in quick succession (eg mario has quavers at 180bpm ~= 150ms)  <span class="green-text">✓</span>
 1. Recycled components (from the bin at work) as much as possible  <span class="green-text">✓</span>
+1. Can be left on all the time:
+    - safe  <span class="green-text">✓</span>
+    - low power  <span class="green-text">✓</span>
 1. Cheap: <s>$200-300</s> <span class="red-text">✗</span>  <s>$500</s> <span class="red-text">✗</span>  <s>$700</s> <span class="red-text">✗</span>  $1000 <span class="red-text">✗</span> 
-1. Done in <s>a couple of weeks.</s><span class="red-text">✗</span>  <s>3 months.</s><span class="red-text">✗</span>  <s>Before August.</s><span class="red-text">✗</span>  <s>Before Christmas.</s><span class="red-text">✗</span> Real soon now<span class="green-text">✓</span>
+1. Done in <s>a couple of weeks.</s><span class="red-text">✗</span> <s>3 months.</s><span class="red-text">✗</span> <s>Before August.</s><span class="red-text">✗</span> <s>Before Christmas.</s><span class="red-text">✗</span> Real soon now<span class="green-text">✓</span>
 1. Stretch goal: 5 year design life 
 
 
@@ -159,9 +170,9 @@ The 6 steps up to the porch were different by necessity - the steps are tiled so
 
 ### Music
 **Piano mode:**<br>
-I dithered a bit about what scale to choose: all 12 notes? Just the major scale? Minor? Pentatonic?
+I dithered about what scale to choose: all 12 notes? Just the major scale? Minor? Pentatonic?
 
-In the end, major is a good default. Pentatonic sounds nice when there are lots of people at once - picking a nice "pluck" soundfont helped - but most people expect major and 23 notes equals 3 octaves exactly. Perhaps 12-tone chromatic could have worked if I was willing to paint the black keys, but that violates the "the before and after photo look the same" requirement.
+In the end, major is a good default. Pentatonic sounds nice when there are lots of people at once (especially with a nice "pluck" soundfont!) but most people expect major - and 23 notes equals 3 octaves exactly. Perhaps 12-tone chromatic could have worked if I was willing to paint the black keys, but that violates the "the before and after photo look the same" requirement.
 
 The settings webapp can toggle preset combos of soundfont and scale. 
 
@@ -194,10 +205,10 @@ Making the sound/light feel responsive took effort, but thankfully didn't requir
 - ability to repeat notes quickly
 
 **Lights:** <br>
-Removing a resistor puts the sensors into 80Hz mode = 12.5ms period. Average latency is 12.5/2 ms plus a little more since six sensors are polled in succession, let's call it 10ms. Filtering on sensor input is basic to avoid delays. Result: light feels instant to a user. 
+The HX711 has an 80Hz mode = 12.5ms period. Average latency is 12.5/2 ms plus a little more since six sensors are polled in succession, let's call it 10ms. Filtering on sensor input is basic to avoid delays. Result: light feels instant to a user. Easy!
 
 **Sounds:** <br>
-Harder. Generated by the head RPi. Achieved a good result, feels "instant". Under 100ms avg latency:
+Harder, since sounds are generated centrally at the head (RPi), not the nodes (ESP32s). Achieved a good result, feels "instant". Under 100ms avg latency:
 - <10ms from sensor polling (as above)
 - 12ms avg from head polling the nodes (42Hz)
 - 20ms(?) from audio stack in RPi OS
@@ -220,26 +231,29 @@ It's very satisfying to double-tap a key!
 
 <!-- vid?? -->
 
+
+### Ideas for "Next time" - what would I do differently?
+
+For electronics, I chose "one node per 6 steps" over "one-microprocessor-per-step" - a classic "centralised vs distributed" decision. Hard to say if this was the right call. Making the node boxes waterproof and running trunk cabling was more effort than expected, but waterproofing 17 microprocessors and cable entries for those would have also been tough. I think it's just grass-is-greener doubt.... but at scale, distributed would indeed be the way to go. Put the load cell amp and an ESP32 in a waterproof housing with a custom PCB instead of wiring. Daisychain power and comms in waterproof glands. More design work but would be quickly amortized.
+
+I avoided needing any custom PCBs for the node boxes by finding pre-built modules. As usual, I underestimated the time to hand-wire everything together so it wouldn't have been too much extra effort to make a PCB to solder all the modules to. Would have been fun too. 
+
+Waterproofing and UV-proofing took *weeks* longer than expected. Normally everything I design is used indoors! If I was willing to spend more I could have saved that effort with a different design. This alternative would replace all the pavers with a thinner tile, enabling a new design for under-tile: a water-tight flat 'box' with transparent sides containing load cells, LEDs and maybe microprocessor. Seems like a heavy lift to make 17 of those but would likely be no more effort than I spent adhering and sealing everything. The compromise would be the price of these custom boxes and needing to replace all pavers in the yard, even the ones without sensors. 
+
+
+![Node box flooded with water](/assets/piano-path/flooded.jpg)
+
+Burying 2 nodes under pavers was a (requirements) mistake. With heavy rain, it's completely submerged for hours. After only a couple of rains, node 2 got compltely flooded (pic above). I think this was primarily due to bad caulking, but with 50C temperature swings I think leaks would be inevitable. Should have changed the "no visible boxes" requirement earlier - now, hidden in the grass, it'll be splashed (IPx4), not submerged (IPx8). Huge difference, much easier.  
+
+Wired serial may have been unnecessary - took some effort to run cables and waterproof. Could have just used wifi for nodes 1 & 2 or zigbee if my fear of wifi came true. 
+
+
+
+<!-- 
 ### What was hard
 - Foam
 - Waterproofing
 - Sensor choice
 - Drainage
 - Cable entries
-
-
-### Ideas for "Next time" - what would I do differently?
-
-For electronics, I chose "one node per 6 steps" over a fully-distributed one-microprocessor-per-step. Hard to say if this was the right call. Making the node boxes waterproof and running trunk cabling was more effort than expected, but waterproofing 17 microprocessors and cable entries for those would have also been tough. I think it's just grass-is-greener doubt.... but at scale, distributed would indeed be the way to go. Put the load cell amp and an ESP32 in a waterproof housing with a custom PCB instead of wiring. Daisychain power and comms in waterproof glands. More design work but would be quickly amortized.
-
-I avoided a custom PCB for the node boxes by finding pre-built modules, but would have been fun. I underestimated the time to hand-wire everything together (as usual) so it wouldn't have been too much extra effort to design a PCB to solder all the modules to. 
-
-Waterproofing and UV-proofing took *weeks* longer than expected. Normally everything I design is used indoors! If I was willing to spend more I could have saved that effort. This alternative design would replace all the pavers with a thinner tile, enabling a new design for under-tile: a water-tight flat 'box' with transparent sides containing load cells, LEDs and maybe microprocessor. Seems like a heavy lift to make 17 of those but would likely be no more effort than I spent adhering and sealing everything. The compromise would be the price of these custom boxes and needing to replace all pavers in the yard, even the ones without sensors. 
-
-
-![]()
-
-Burying 2 nodes under pavers was a (requirements) mistake. With heavy rain, it's completely submerged for hours. Node 2's failure-by-inundation was an "early death" presumably due to build error, but with 50C temperature swings I think a leak is inevitable. Should have changed the "no visible boxes" requirement earlier - now, hidden in the grass, it'll be splashed (IPx4), not submerged (IPx8). Huge difference, much easier.  
-
-Wired serial may have been unnecessary - took some effort to run cables and waterproof. Could have just used wifi for nodes 1 & 2 or zigbee if my fear of wifi came true. 
-
+ -->
