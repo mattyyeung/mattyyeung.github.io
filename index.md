@@ -18,7 +18,7 @@ layout: default
 
 - ### [GreenForecast - Details for Tech People](/greenforecast-tech-details)
 
-- ### [The International Divisibility Rules Database](https://divisibilityrules.com/) <br>*\[External link\] A Vital public work.*
+- ### [The International Divisibility Rules Database \[External link\]](https://divisibilityrules.com/)<br>*A Vital public work.*
 
 <!-- - ### [MicroGEM Sal6830™](/sal6830) -->
 
